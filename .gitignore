@@ -1,11 +1,11 @@
 # Environment
 .env
 
-# Binaries
-api
-fetcher
-transformer
-test
+# Binaries (root-level build output only)
+/api
+/fetcher
+/transformer
+/test
 
 # Go build cache
 *.exe
