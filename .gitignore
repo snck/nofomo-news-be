@@ -1,0 +1,24 @@
+# Environment
+.env
+
+# Binaries
+api
+fetcher
+transformer
+test
+
+# Go build cache
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test cache
+*.test
+*.out
+
+# Dependency directories
+vendor/
+
+todo.md
