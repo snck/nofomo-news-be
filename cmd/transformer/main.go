@@ -39,9 +39,14 @@ func main() {
 	openAIClient := llm.NewOpenAIClient(os.Getenv("OPENAI_API_KEY"))
 
 	for {
-		id, err := db.PopFromQueue(db.TransformQueueKey)
+		id, err := db.PopFromQueue(db.TransformQueueKey, 10*time.Second)
 		if err != nil {
 			slog.Error("error popping from Redis queue", "error", err)
+			break
+		}
+
+		if id == "" {
+			slog.Info("Queue is empty, exiting")
 			break
 		}
 

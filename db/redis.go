@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/redis/go-redis/v9"
 )
@@ -43,8 +44,8 @@ func PushToQueue(queueKey string, data string) error {
 	return Redis.LPush(Ctx, queueKey, data).Err()
 }
 
-func PopFromQueue(queueKey string) (string, error) {
-	result, err := Redis.BRPop(Ctx, 0, queueKey).Result()
+func PopFromQueue(queueKey string, timeout time.Duration) (string, error) {
+	result, err := Redis.BRPop(Ctx, timeout, queueKey).Result()
 	if err != nil {
 		return "", err
 	}
