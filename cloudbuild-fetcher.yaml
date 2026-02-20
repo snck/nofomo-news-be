@@ -1,0 +1,19 @@
+steps:
+  # Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-f', 'Dockerfile.fetcher', '-t', 'gcr.io/$PROJECT_ID/nofomo-fetcher', '.']
+  
+  # Push
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/nofomo-fetcher']
+  
+  # Deploy
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'jobs'
+      - 'deploy'
+      - 'nofomo-fetcher'
+      - '--image=gcr.io/$PROJECT_ID/nofomo-fetcher'
+      - '--region=asia-southeast3'

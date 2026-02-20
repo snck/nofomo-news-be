@@ -1,0 +1,19 @@
+steps:
+  # Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-f', 'Dockerfile.transformer', '-t', 'gcr.io/$PROJECT_ID/nofomo-transformer', '.']
+  
+  # Push
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/nofomo-transformer']
+  
+  # Deploy
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'jobs'
+      - 'deploy'
+      - 'nofomo-transformer'
+      - '--image=gcr.io/$PROJECT_ID/nofomo-transformer'
+      - '--region=asia-southeast3'
