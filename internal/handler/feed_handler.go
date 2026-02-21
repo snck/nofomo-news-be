@@ -5,16 +5,25 @@ import (
 	"net/http"
 	"strconv"
 	"time"
-	"zennews/internal/repository"
+	"zennews/internal/model"
 
 	"github.com/gin-gonic/gin"
 )
 
-type ArticleHandler struct {
-	repository *repository.ArticleRepository
+type ArticleStore interface {
+	GetFeed(limit, offset int) ([]model.FeedArticle, error)
+	GetFeedTotal() (int, error)
+	GetSymbolsByOriginalIDs(ids []int64) (map[int64][]string, error)
+	GetTransformedByID(id int64) (*model.SingleArticle, error)
+	GetSymbolsByOriginalID(id int64) ([]string, error)
+	GetAllCategories() ([]model.Category, error)
 }
 
-func NewArticleHandler(repository *repository.ArticleRepository) *ArticleHandler {
+type ArticleHandler struct {
+	repository ArticleStore
+}
+
+func NewArticleHandler(repository ArticleStore) *ArticleHandler {
 	return &ArticleHandler{repository: repository}
 }
 
