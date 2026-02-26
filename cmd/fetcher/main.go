@@ -31,52 +31,65 @@ func main() {
 	}
 	defer db.CloseRedis()
 
-	client := news.NewFinnHubClient(os.Getenv("FINNHUB_API_KEY"))
+	var clients []news.NewsClient
+	if key := os.Getenv("FINNHUB_API_KEY"); key != "" {
+		clients = append(clients, news.NewFinnHubClient(key))
+	}
+	if key := os.Getenv("ALPHA_VANTAGE_API_KEY"); key != "" {
+		clients = append(clients, news.NewAlphaVantageClient(key))
+	}
 
-	fetchedArticles, err := client.Fetch(10)
-	if err != nil {
-		slog.Error("error fetching from FinnHub", "error", err)
+	if len(clients) == 0 {
+		slog.Error("no news source API keys configured")
 		return
 	}
 
-	repository := repository.NewArticleRepository(db.DB)
+	repo := repository.NewArticleRepository(db.DB)
 
-	var saved, duplicated, errors int
+	for _, client := range clients {
+		source := client.Name()
 
-	for _, a := range fetchedArticles {
-		article := model.OriginalArticle{
-			Headline:    a.Headline,
-			Detail:      a.Detail,
-			URL:         a.URL,
-			Source:      a.Source,
-			Publisher:   a.Publisher,
-			PublishedAt: a.PublishedAt,
-			ExternalID:  a.ExternalID,
-		}
-
-		success, err := repository.SaveOriginalWithSymbols(&article, a.Symbols)
-
+		fetchedArticles, err := client.Fetch(50)
 		if err != nil {
-			slog.Error("error saving article", "error", err)
-			errors++
+			slog.Error("error fetching articles", "source", source, "error", err)
 			continue
 		}
 
-		if !success {
-			slog.Info("duplicate article skipped", "url", a.URL)
-			duplicated++
-			continue
+		var saved, duplicated, errors int
+
+		for _, a := range fetchedArticles {
+			article := model.OriginalArticle{
+				Headline:    a.Headline,
+				Detail:      a.Detail,
+				URL:         a.URL,
+				Source:      a.Source,
+				Publisher:   a.Publisher,
+				PublishedAt: a.PublishedAt,
+				ExternalID:  a.ExternalID,
+			}
+
+			success, err := repo.SaveOriginalWithSymbols(&article, a.Symbols)
+			if err != nil {
+				slog.Error("error saving article", "source", source, "error", err)
+				errors++
+				continue
+			}
+
+			if !success {
+				slog.Info("duplicate article skipped", "source", source, "url", a.URL)
+				duplicated++
+				continue
+			}
+
+			saved++
+
+			err = db.PushToQueue(db.TransformQueueKey, strconv.FormatInt(article.ID, 10))
+			if err != nil {
+				slog.Error("error pushing to Redis queue", "source", source, "error", err, "article_id", article.ID)
+				errors++
+			}
 		}
 
-		saved++
-
-		err = db.PushToQueue(db.TransformQueueKey, strconv.FormatInt(article.ID, 10))
-		if err != nil {
-			slog.Error("error pushing to Redis queue", "error", err, "article_id", article.ID)
-			errors++
-		}
-
+		slog.Info("fetch complete", "source", source, "saved", saved, "duplicated", duplicated, "errors", errors)
 	}
-
-	slog.Info("fetch complete", "saved", saved, "duplicated", duplicated, "errors", errors)
 }

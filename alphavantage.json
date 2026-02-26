@@ -1,0 +1,2075 @@
+{
+    "items": "50",
+    "sentiment_score_definition": "x <= -0.35: Bearish; -0.35 < x <= -0.15: Somewhat-Bearish; -0.15 < x < 0.15: Neutral; 0.15 <= x < 0.35: Somewhat_Bullish; x >= 0.35: Bullish",
+    "relevance_score_definition": "0 < x <= 1, with a higher score indicating higher relevance.",
+    "feed": [
+        {
+            "title": "Vista Gold Corp Files For Common Stock Offering Of Up To $30 Million",
+            "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN3ZL1OM:0-vista-gold-corp-files-for-common-stock-offering-of-up-to-30-million/",
+            "time_published": "20260226T075324",
+            "authors": [
+                "Refinitiv",
+                "Reuters"
+            ],
+            "summary": "Vista Gold Corp has filed for an offering of common stock valued at up to $30 million. This news was reported by Reuters via Refinitiv. The filing indicates the company's intention to raise capital through the issuance of stock.",
+            "banner_image": null,
+            "source": "TradingView",
+            "category_within_source": "General",
+            "source_domain": "TradingView",
+            "topics": [
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.808873"
+                },
+                {
+                    "topic": "ipo",
+                    "relevance_score": "0.936377"
+                }
+            ],
+            "overall_sentiment_score": -0.201083,
+            "overall_sentiment_label": "Somewhat-Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "VGZ",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.216860",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "Usana’s Rise Wellness announces launch of Protein Pop Plus at Costco nationwide",
+            "url": "https://www.tipranks.com/news/the-fly/usanas-rise-wellness-announces-launch-of-protein-pop-plus-at-costco-nationwide-thefly-news",
+            "time_published": "20260226T075300",
+            "authors": [],
+            "summary": "Usana's Rise Wellness has launched Protein Pop Plus, a new carbonated, ready-to-drink clear protein beverage, now available nationwide at all 607 Costco locations in the United States. This expansion builds on the success of their original Protein Pop line, offering consumers another option for high-protein nutrition in a refreshing format. Rise Wellness is a wholly owned subsidiary of Usana Health Sciences (USNA).",
+            "banner_image": "https://blog.tipranks.com/wp-content/uploads/2022/09/cropped-Asset-4-96x96.png",
+            "source": "TipRanks",
+            "category_within_source": "General",
+            "source_domain": "TipRanks",
+            "topics": [
+                {
+                    "topic": "retail_wholesale",
+                    "relevance_score": "0.900579"
+                },
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.832125"
+                },
+                {
+                    "topic": "life_sciences",
+                    "relevance_score": "0.649002"
+                }
+            ],
+            "overall_sentiment_score": 0.082766,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "USNA",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.245876",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "COST",
+                    "relevance_score": "0.809796",
+                    "ticker_sentiment_score": "-0.148086",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "McDonald's (MCD) Margin Steadiness Tested By Premium Valuation After FY 2025 Results",
+            "url": "https://simplywall.st/stocks/us/consumer-services/nyse-mcd/mcdonalds/news/mcdonalds-mcd-margin-steadiness-tested-by-premium-valuation",
+            "time_published": "20260226T074659",
+            "authors": [
+                "Simply Wall St"
+            ],
+            "summary": "McDonald's (MCD) closed FY 2025 with strong revenue and EPS, showcasing a robust 31.9% net profit margin despite mixed traffic trends. While the company's asset-light model and international expansion efforts support its premium valuation, the current share price of US$333.01 significantly exceeds its DCF fair value estimate of US$242.21, raising concerns for value-focused investors. The article highlights both bullish arguments, such as consistent earnings growth and dividend yield, and bearish risks including market saturation and reliance on sustained margins to justify its high P/E ratio.",
+            "banner_image": "https://images.ctfassets.net/n07nr2koi959/1txW1Rnk3fUjh2FW939y6e/a1bb305c92d46eae2c7f925893392fdd/avatar-v2.png?w=64&h=64&q=90&fit=fill&f=top",
+            "source": "Simply Wall Street",
+            "category_within_source": "General",
+            "source_domain": "Simply Wall Street",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.919503"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.818607"
+                },
+                {
+                    "topic": "retail_wholesale",
+                    "relevance_score": "0.719990"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.640885"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.641263"
+                }
+            ],
+            "overall_sentiment_score": -0.24584,
+            "overall_sentiment_label": "Somewhat-Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MCD",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.240308",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "Dow Inc (DOW) Sheds on Lack of Leads, Ahead of Dividends",
+            "url": "https://finviz.com/news/322836/dow-inc-dow-sheds-on-lack-of-leads-ahead-of-dividends",
+            "time_published": "20260226T074415",
+            "authors": [
+                "Angelica Ballesteros"
+            ],
+            "summary": "Dow Inc. (DOW) saw its share prices drop by as much as 4.5% on Wednesday, closing at $30.03, due to a lack of new catalysts and investor repositioning ahead of dividend payments. The company plans to distribute $0.35 per share to shareholders on February 27, marking its 458th consecutive dividend. This follows a challenging year where Dow reported a net loss of $2.6 billion, a significant decrease from the $1.1 billion net income in 2024, primarily attributed to declining prices and operating rates.",
+            "banner_image": "https://d2gr5kl7dt2z3t.cloudfront.net/blog/wp-content/uploads/2015/06/Biotech-Biochemical-Stocks-31.jpg",
+            "source": "Finviz - Stock Screener",
+            "category_within_source": "General",
+            "source_domain": "Finviz - Stock Screener",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "1.000000"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.937563"
+                }
+            ],
+            "overall_sentiment_score": -0.283303,
+            "overall_sentiment_label": "Somewhat-Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "DOW",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.250396",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "BlackRock increases holding in Greatland Resources above 5.5%",
+            "url": "https://www.share-talk.com/blackrock-increases-holding-in-greatland-resources-above-5-5/",
+            "time_published": "20260226T073455",
+            "authors": [
+                "Abm"
+            ],
+            "summary": "BlackRock, Inc. has increased its shareholding in Greatland Resources Limited to 5.52% of the company's voting rights as of February 24, 2026. This modest increase from its previous 5.50% position confirms BlackRock's continued significant institutional presence on the company's register. The total interest consists of 5.49% directly attached to shares and 0.02% held via financial instruments, equating to 37,156,923 voting rights.",
+            "banner_image": "https://i0.wp.com/www.share-talk.com/wp-content/uploads/2026/01/GGP-20TH-JAN.jpg?resize=750%2C406&ssl=1",
+            "source": "Share Talk",
+            "category_within_source": "General",
+            "source_domain": "Share Talk",
+            "topics": [
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.930192"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.841643"
+                }
+            ],
+            "overall_sentiment_score": 0.384935,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "BLK",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.415187",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Is It Too Late To Consider Howmet Aerospace (HWM) After Its 97% One Year Surge?",
+            "url": "https://simplywall.st/stocks/us/capital-goods/nyse-hwm/howmet-aerospace/news/is-it-too-late-to-consider-howmet-aerospace-hwm-after-its-97",
+            "time_published": "20260226T073441",
+            "authors": [
+                "Simply Wall St"
+            ],
+            "summary": "Howmet Aerospace (HWM) has seen a significant 97.2% surge over the past year. However, Simply Wall St's valuation analysis suggests the stock might be overvalued, with a discounted cash flow (DCF) model indicating it's 37.3% above its estimated intrinsic value and a P/E ratio higher than industry averages. The article presents both bullish and bearish narratives for the stock, allowing investors to consider different growth assumptions and risks.",
+            "banner_image": "https://images.ctfassets.net/n07nr2koi959/6YVpCWgrk0c9DenG6UgW8m/d79e37d527c71a95e08b9ce1071ba986/Image_from_iOS.jpg?fit=thumb&w=64&h=64",
+            "source": "Simply Wall Street",
+            "category_within_source": "General",
+            "source_domain": "Simply Wall Street",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.915968"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.907225"
+                }
+            ],
+            "overall_sentiment_score": -0.287068,
+            "overall_sentiment_label": "Somewhat-Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "HWM",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.250092",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "CarMax to Pay Nearly $500,000 to Remedy Illegal Repossessions of U.S. Servicemembers’ Vehicles",
+            "url": "https://finchannel.com/carmax-to-pay-nearly-500000-to-remedy-illegal-repossessions-of-u-s-servicemembers-vehicles/129513/american-business-trends/oil-auto-en/2026/02/",
+            "time_published": "20260226T073355",
+            "authors": [
+                "The FINANCIAL"
+            ],
+            "summary": "The Justice Department has announced a settlement with CarMax Inc. requiring the company to pay nearly $500,000 for illegally repossessing vehicles owned by U.S. servicemembers. This action addresses violations of the Servicemembers Civil Relief Act (SCRA), which protects military personnel from repossession without a court order. CarMax will pay $420,000 in damages to servicemembers and a $79,380 civil penalty to the United States, in addition to revising its policies.",
+            "banner_image": null,
+            "source": "finchannel",
+            "category_within_source": "General",
+            "source_domain": "finchannel",
+            "topics": [
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.647421"
+                },
+                {
+                    "topic": "retail_wholesale",
+                    "relevance_score": "0.728366"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.826259"
+                }
+            ],
+            "overall_sentiment_score": -0.40353,
+            "overall_sentiment_label": "Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "KMX",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.436505",
+                    "ticker_sentiment_label": "Bearish"
+                }
+            ]
+        },
+        {
+            "title": "Pre-market: ABT.SW Abbott Laboratories (SIX) -12.00% to CHF88.00: watch CHF85.00",
+            "url": "https://meyka.com/blog/pre-market-abtsw-abbott-laboratories-six-1200-to-chf8800-watch-chf8500-2602/",
+            "time_published": "20260226T073337",
+            "authors": [
+                "Huzaifa Zahoor"
+            ],
+            "summary": "Abbott Laboratories (ABT.SW) saw a sharp 12.00% drop in pre-market trading on SIX, reaching CHF88.00, driven by profit-taking and market re-pricing following recent headlines. The stock is now well below its 50-day average, with immediate support identified around CHF85.00. Despite the technical oversold conditions and premium valuation, Meyka AI issues a \"BUY\" suggestion and projects a one-year price target of CHF100.56, while cautioning traders to consider short-term risks and conservative strategies.",
+            "banner_image": null,
+            "source": "Meyka",
+            "category_within_source": "General",
+            "source_domain": "Meyka",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.819786"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.903234"
+                },
+                {
+                    "topic": "life_sciences",
+                    "relevance_score": "0.739936"
+                }
+            ],
+            "overall_sentiment_score": -0.29343,
+            "overall_sentiment_label": "Somewhat-Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "ABT",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.258975",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "Upstream Bio announces participation in major healthcare conferences",
+            "url": "https://tradersunion.com/news/companies/show/1551733-upstream-bio-conferences/",
+            "time_published": "20260226T073239",
+            "authors": [
+                "Mikhail Vnuchkov"
+            ],
+            "summary": "Upstream Bio's CEO, Rand Sutherland, MD, is scheduled to participate in fireside chats at two major healthcare conferences: the TDCowen Health Care Conference on March 4 and the LeerinkPartners Global Healthcare Conference on March 9. His appearances underscore the company's commitment to engaging in critical industry discussions.",
+            "banner_image": "https://files.tradersunion.com/images/twitter-news/upstreambio/upstreambio_01.jpg",
+            "source": "Traders Union",
+            "category_within_source": "General",
+            "source_domain": "Traders Union",
+            "topics": [
+                {
+                    "topic": "life_sciences",
+                    "relevance_score": "0.943589"
+                }
+            ],
+            "overall_sentiment_score": 0.233195,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "UPB",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.226035",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "U.S. District Court for the District of New Jersey Judge Trims Benzene Class Claims Against Johnson & Johnson Consumer Inc. and Kenvue Inc.",
+            "url": "https://usaherald.com/u-s-district-court-for-the-district-of-new-jersey-judge-trims-benzene-class-claims-against-johnson-johnson-consumer-inc-and-kenvue-inc/",
+            "time_published": "20260226T073052",
+            "authors": [
+                "Ahmed Boughalleb"
+            ],
+            "summary": "A federal judge in New Jersey has narrowed a proposed multistate class action lawsuit against Johnson & Johnson Consumer Inc. and Kenvue Inc. The lawsuit alleged that acne creams sold under the Clean & Clear and Neutrogena brands contained cancer-causing benzene without proper warnings. While claims for monetary damages were allowed to proceed, the court dismissed large portions of the plaintiffs’ state and common law claims due to a lack of adequate connection between alleged federal manufacturing violations and cited state laws.",
+            "banner_image": "https://usaherald.com/wp-content/uploads/2026/02/unnamed-39-1-e1772091058850-696x523.jpg",
+            "source": "USA Herald",
+            "category_within_source": "General",
+            "source_domain": "USA Herald",
+            "topics": [
+                {
+                    "topic": "life_sciences",
+                    "relevance_score": "0.914029"
+                }
+            ],
+            "overall_sentiment_score": 0.214347,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "KVUE",
+                    "relevance_score": "0.805521",
+                    "ticker_sentiment_score": "0.278631",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "JNJ",
+                    "relevance_score": "0.742431",
+                    "ticker_sentiment_score": "0.144035",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Verizon Communications Stock Holds Steady Near 52-Week High Amid Analyst Upgrades and Fiber Expansion Push",
+            "url": "https://www.ibtimes.com.au/verizon-communications-stock-holds-steady-near-52-week-high-amid-analyst-upgrades-fiber-expansion-1862133",
+            "time_published": "20260226T073049",
+            "authors": [
+                "Daniel Lee"
+            ],
+            "summary": "Verizon Communications (NYSE: VZ) stock remained near its 52-week high despite a slight dip, propelled by strong subscriber growth, a high dividend yield, and positive analyst sentiment after exceeding Q4 2025 earnings estimates. The company is actively expanding its 5G and fiber broadband networks, aiming to capture significant subscriber additions in 2026, while analysts have raised price targets based on these strategic moves. Despite some insider selling and minor policy changes, Verizon is viewed as a stable, income-generating investment with a strong balance sheet, appealing to dividend-focused investors.",
+            "banner_image": "https://d.ibtimes.com.au/en/full/214511/verizon.jpg?w=736&f=f07ab925d40f7e19e266e66c06463249",
+            "source": "International Business Times Australia",
+            "category_within_source": "General",
+            "source_domain": "International Business Times Australia",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.907079"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.913434"
+                },
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.804257"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.707536"
+                },
+                {
+                    "topic": "mergers_and_acquisitions",
+                    "relevance_score": "0.637641"
+                }
+            ],
+            "overall_sentiment_score": 0.291349,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "VZ",
+                    "relevance_score": "0.984915",
+                    "ticker_sentiment_score": "0.409667",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "C",
+                    "relevance_score": "0.655895",
+                    "ticker_sentiment_score": "0.280468",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "JPM",
+                    "relevance_score": "0.694302",
+                    "ticker_sentiment_score": "0.281110",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "T",
+                    "relevance_score": "0.720304",
+                    "ticker_sentiment_score": "0.105114",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Odysseus Holdings and CoinShares publish the offer document for the transaction with Vine Hill",
+            "url": "https://www.manilatimes.net/2026/02/26/tmt-newswire/globenewswire/odysseus-holdings-and-coinshares-publish-the-offer-document-for-the-transaction-with-vine-hill/2285615",
+            "time_published": "20260226T072020",
+            "authors": [
+                "GlobeNewswire"
+            ],
+            "summary": "Odysseus Holdings and CoinShares International Limited have published the offer document for their transaction with Vine Hill Capital Investment Corp. This transaction involves a proposed change of CoinShares' listing venue to a U.S. public stock market or other exchange through a joint merger plan, including a court-sanctioned scheme of arrangement. The offer document, prepared in accordance with Takeover Rules for Nasdaq Stockholm and Nordic Growth Market NGM, is available on both CoinShares' and Odysseus Holdings' websites.",
+            "banner_image": "https://ml-eu.globenewswire.com/media/N2NjZWQwYmItZTIxZi00YzM1LTgxYTUtMjQwM2E5YTdjNTMyLTEyMTg4MDQtMjAyNi0wMi0yNi1lbg==/tiny/CoinShares-International-Limit.png",
+            "source": "The Manila Times",
+            "category_within_source": "General",
+            "source_domain": "The Manila Times",
+            "topics": [
+                {
+                    "topic": "mergers_and_acquisitions",
+                    "relevance_score": "1.000000"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.835045"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.706998"
+                }
+            ],
+            "overall_sentiment_score": 0.201863,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "VCIC",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.182057",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Marriott Vacations Stock Q4 Review: Finding A Bottom (NYSE:VAC)",
+            "url": "https://seekingalpha.com/article/4875048-marriott-vacations-q4-review-finding-a-bottom",
+            "time_published": "20260226T071922",
+            "authors": [
+                "Seeking Profits"
+            ],
+            "summary": "Marriott Vacations Worldwide (VAC) shares, despite recent underperformance, are rated a 'buy' due to new leadership and a strategic refocus on higher-performing assets. The company trades at approximately 9x earnings with a double-digit free cash flow yield and offers a 5.7% dividend yield, suggesting over 10% upside potential. While management's 2026 guidance is cautious, improving delinquencies and operational resets position VAC as an attractive turnaround with potential for multiple expansion.",
+            "banner_image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/619760926/image_619760926.jpg?io=getty-c-w630",
+            "source": "Seeking Alpha",
+            "category_within_source": "General",
+            "source_domain": "Seeking Alpha",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.927897"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.816325"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.643432"
+                },
+                {
+                    "topic": "real_estate",
+                    "relevance_score": "0.711695"
+                }
+            ],
+            "overall_sentiment_score": 0.400413,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "VAC",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.401867",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Viemed Healthcare (VMD) Expected to Announce Quarterly Earnings on Wednesday",
+            "url": "https://www.marketbeat.com/instant-alerts/viemed-healthcare-vmd-expected-to-announce-quarterly-earnings-on-wednesday-2026-02-26/",
+            "time_published": "20260226T071646",
+            "authors": [
+                "MarketBeat"
+            ],
+            "summary": "Viemed Healthcare (NASDAQ:VMD) is projected to release its Q4 2025 earnings after market close on Wednesday, March 4th, with analysts anticipating $0.12 EPS on $77.70 million in revenue. The company's stock currently trades around $8.61, with a market cap of $327.35 million, and has received mixed analyst ratings, including a recent \"strong-buy\" upgrade from Wall Street Zen. Institutional investors hold approximately 74.24% of the shares.",
+            "banner_image": "https://www.marketbeat.com/logos/viemed-healthcare-inc-logo-1200x675.png?v=20241011155938",
+            "source": "MarketBeat",
+            "category_within_source": "General",
+            "source_domain": "MarketBeat",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.931272"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.842493"
+                },
+                {
+                    "topic": "life_sciences",
+                    "relevance_score": "0.705516"
+                }
+            ],
+            "overall_sentiment_score": 0.024789,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "VMD",
+                    "relevance_score": "0.306825",
+                    "ticker_sentiment_score": "0.027498",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "AT&T Inc. Agrees to Let Shareholders Vote on NYC Pension Funds’ Diversity Proposal, Settling Federal Suit",
+            "url": "https://usaherald.com/att-inc-agrees-to-let-shareholders-vote-on-nyc-pension-funds-diversity-proposal-settling-federal-suit/",
+            "time_published": "20260226T071537",
+            "authors": [
+                "Ahmed Boughalleb"
+            ],
+            "summary": "AT&T Inc. has settled a federal lawsuit with several New York City pension funds, agreeing to include a shareholder proposal on its ballot that demands greater transparency regarding workforce diversity reporting. The lawsuit, filed on February 17, accused AT&T of improperly excluding the proposal, which asks for the public disclosure of the company's annual demographic data report submitted to the U.S. Equal Employment Opportunity Commission. Under the settlement, AT&T will include the proposal, and both sides will cover their own legal costs.",
+            "banner_image": "https://usaherald.com/wp-content/uploads/2026/02/rubaitul-azad-nIoBrTZvjLs-unsplash-scaled.jpg",
+            "source": "USA Herald",
+            "category_within_source": "General",
+            "source_domain": "USA Herald",
+            "topics": [
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.823566"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.616542"
+                }
+            ],
+            "overall_sentiment_score": 0.00741,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "T",
+                    "relevance_score": "0.328825",
+                    "ticker_sentiment_score": "0.000035",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Rep. Cleo Fields Buys Lam Research Corporation (NASDAQ:LRCX) Stock",
+            "url": "https://www.marketbeat.com/instant-alerts/rep-cleo-fields-buys-lam-research-corporation-nasdaqlrcx-stock-2026-02-26/",
+            "time_published": "20260226T070959",
+            "authors": [
+                "MarketBeat"
+            ],
+            "summary": "Representative Cleo Fields (Democratic-Louisiana) recently purchased between $15,001 and $50,000 worth of Lam Research (NASDAQ: LRCX) shares on February 3rd. This transaction was part of several recent stock purchases by Fields, including significant investments in Alphabet, Micron Technology, and Meta Platforms. Lam Research recently beat quarterly earnings estimates and announced a quarterly dividend, with analysts maintaining a \"Moderate Buy\" rating for the stock.",
+            "banner_image": "https://www.marketbeat.com/logos/lam-research-co-logo-1200x675.png?v=20231214125532",
+            "source": "MarketBeat",
+            "category_within_source": "General",
+            "source_domain": "MarketBeat",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.930191"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.911336"
+                },
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.821164"
+                }
+            ],
+            "overall_sentiment_score": 0.1502,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "LRCX",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.315841",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "AAPL",
+                    "relevance_score": "0.620024",
+                    "ticker_sentiment_score": "0.136623",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "GOOGL",
+                    "relevance_score": "0.612089",
+                    "ticker_sentiment_score": "0.127790",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "MU",
+                    "relevance_score": "0.627957",
+                    "ticker_sentiment_score": "0.149276",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AMD",
+                    "relevance_score": "0.626698",
+                    "ticker_sentiment_score": "0.131499",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Raymond James Maintains Outperform on Par Pacific Holdings, Inc. (PARR) Feb 2026",
+            "url": "https://meyka.com/blog/raymond-james-maintains-outperform-on-par-pacific-holdings-inc-parr-feb-2026-2602/",
+            "time_published": "20260226T070429",
+            "authors": [
+                "Huzaifa Zahoor"
+            ],
+            "summary": "Raymond James has reiterated its Outperform rating for Par Pacific Holdings, Inc. (PARR) with a $50.00 price target, citing a stronger refining outlook. The market reacted modestly with a 1.02% increase in share price. Meyka AI also rates PARR with a B+, suggesting the rating is a constructive signal for investors to examine refining exposure but emphasizes the need for further fundamental analysis.",
+            "banner_image": "https://meyka.com/banner-images/svg-banner/meyka-banner-desktop.svg",
+            "source": "Meyka",
+            "category_within_source": "General",
+            "source_domain": "Meyka",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.812146"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.914353"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.610581"
+                },
+                {
+                    "topic": "energy_transportation",
+                    "relevance_score": "0.719370"
+                }
+            ],
+            "overall_sentiment_score": 0.233142,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "RJF",
+                    "relevance_score": "0.642201",
+                    "ticker_sentiment_score": "0.229304",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Crown Castle (CCI) Maintains Quarterly Dividend of $1.0625 Per Share",
+            "url": "https://www.gurufocus.com/news/8655317/crown-castle-cci-maintains-quarterly-dividend-of-10625-per-share",
+            "time_published": "20260226T065804",
+            "authors": [],
+            "summary": "Crown Castle (CCI) has announced it will maintain its quarterly dividend at $1.0625 per share, leading to a forward yield of 4.94%. The company, a leading REIT focusing on wireless infrastructure, is divesting its fiber business to become a standalone tower operator by mid-2026. While exhibiting strong operating margins, CCI faces concerns regarding declining revenue growth and financial strength, as indicated by its debt levels and Altman Z-Score.",
+            "banner_image": "https://static.gurufocus.com/cdn-cgi/image/width=600,quality=100/logos/0C00000AT4.png?20",
+            "source": "GuruFocus",
+            "category_within_source": "General",
+            "source_domain": "GuruFocus",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.935382"
+                },
+                {
+                    "topic": "real_estate",
+                    "relevance_score": "0.727328"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.838848"
+                }
+            ],
+            "overall_sentiment_score": 0.025094,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "CCI",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.030917",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Jack Henry & Associates, Inc. (NASDAQ:JKHY) Receives Consensus Recommendation of \"Moderate Buy\" from Analysts",
+            "url": "https://www.marketbeat.com/instant-alerts/jack-henry-associates-inc-nasdaqjkhy-receives-consensus-recommendation-of-moderate-buy-from-analysts-2026-02-26/",
+            "time_published": "20260226T065550",
+            "authors": [
+                "MarketBeat"
+            ],
+            "summary": "Jack Henry & Associates (NASDAQ:JKHY) has received a \"Moderate Buy\" consensus rating from analysts, with an average 12-month price target of $200.42. The company recently surpassed quarterly earnings and revenue estimates and raised its FY2026 guidance. Insider selling and institutional ownership are also noted, alongside a recent increase in the quarterly dividend.",
+            "banner_image": "https://www.marketbeat.com/logos/jack-henry--associates-inc-logo-1200x675.png?v=20221107130435",
+            "source": "MarketBeat",
+            "category_within_source": "General",
+            "source_domain": "MarketBeat",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.914866"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.830624"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.713812"
+                },
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.643756"
+                }
+            ],
+            "overall_sentiment_score": 0.450319,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "JKHY",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.491646",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Thermo Fisher Announces 10% Increase in Quarterly Dividend",
+            "url": "https://intellectia.ai/news/stock/thermo-fisher-announces-10-increase-in-quarterly-dividend",
+            "time_published": "20260226T065538",
+            "authors": [
+                "Emily J. Thompson"
+            ],
+            "summary": "Thermo Fisher Scientific has announced a 10% increase in its quarterly dividend, raising it from $0.43 to $0.47 per share. This increase, payable on April 15 with a March 13 record date, reflects the company's strong cash flow and profitability, leading to a forward yield of 0.37%. The company also projects strong future growth with revenue guidance up to $47.2 billion for 2026 and anticipated EPS growth of 6% to 8%, supported by AI initiatives and strategic acquisitions.",
+            "banner_image": "https://d159e3ysga2l0q.cloudfront.net/image/icon/TMO_icon.jpeg",
+            "source": "Intellectia AI",
+            "category_within_source": "General",
+            "source_domain": "Intellectia AI",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.945062"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.710691"
+                },
+                {
+                    "topic": "life_sciences",
+                    "relevance_score": "0.716232"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.604708"
+                }
+            ],
+            "overall_sentiment_score": 0.436802,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "TMO",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.403580",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Vir Biotechnology Announces Pricing of Public Offering of Common Stock",
+            "url": "https://www.pharmiweb.com/press-release/2026-02-26/vir-biotechnology-announces-pricing-of-public-offering-of-common-stock",
+            "time_published": "20260226T065327",
+            "authors": [],
+            "summary": "Vir Biotechnology, Inc. announced the pricing of an underwritten public offering of 17,647,058 shares of its common stock at $8.50 per share, aiming to raise $150 million before deductions. The company also granted underwriters a 30-day option to purchase an additional 2,647,058 shares. The offering is expected to close on February 27, 2026, with proceeds solely benefiting Vir Biotechnology.",
+            "banner_image": "https://mms.businesswire.com/media/20260225619481/en/2346430/22/Vir_Biotechnology_Logo.jpg",
+            "source": "PharmiWeb.com",
+            "category_within_source": "General",
+            "source_domain": "PharmiWeb.com",
+            "topics": [
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.910582"
+                },
+                {
+                    "topic": "life_sciences",
+                    "relevance_score": "0.809445"
+                }
+            ],
+            "overall_sentiment_score": 0.114952,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "VIR",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.104094",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Pinnacle West Q4 & Annual Earnings: $15.4M Profit, $1.13B Revenue - News and Statistics",
+            "url": "https://www.indexbox.io/blog/pinnacle-west-reports-q4-and-full-year-financial-results-beats-analyst-estimates/",
+            "time_published": "20260226T065321",
+            "authors": [],
+            "summary": "Pinnacle West Capital Corp. announced its Q4 financial results, reporting a net income of $15.4 million and revenue of $1.13 billion, beating analyst expectations. For the full year, the company had a profit of $616.5 million and total revenue of $5.34 billion. Pinnacle West also provided 2026 full-year earnings guidance between $4.55 and $4.75 per share.",
+            "banner_image": null,
+            "source": "IndexBox",
+            "category_within_source": "General",
+            "source_domain": "IndexBox",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "1.000000"
+                }
+            ],
+            "overall_sentiment_score": 0.412515,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "PNW",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.416541",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Why McKesson Stock Jumped 40%?",
+            "url": "https://www.trefis.com/stock/mck/articles2/591634/why-mckesson-stock-jumped-40/2026-02-26",
+            "time_published": "20260226T065059",
+            "authors": [
+                "Trefis Team"
+            ],
+            "summary": "McKesson (MCK) stock surged 41% between August 2025 and February 2026, driven by strong oncology segment growth, accelerated core business performance, and enhanced profitability. The company's strategic focus on high-growth North American markets, improved earnings per share, and robust free cash flow generation contributed significantly to investor confidence. However, potential future challenges include a recent decline in operating cash flow and margin pressure from the Inflation Reduction Act.",
+            "banner_image": "https://s3.amazonaws.com/wp-uploads-trefis/articles/wp-content/uploads/2025/10/27050432/why_stock_moved_up-300x300.png",
+            "source": "Trefis",
+            "category_within_source": "General",
+            "source_domain": "Trefis",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "1.000000"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.940058"
+                },
+                {
+                    "topic": "life_sciences",
+                    "relevance_score": "0.842245"
+                }
+            ],
+            "overall_sentiment_score": 0.024661,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MCK",
+                    "relevance_score": "0.332622",
+                    "ticker_sentiment_score": "0.021356",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "L3Harris Technologies Stock Surged 70%, Here’s Why",
+            "url": "https://www.trefis.com/stock/lhx/articles2/591635/l3harris-technologies-stock-surged-70-heres-why/2026-02-26",
+            "time_published": "20260226T065053",
+            "authors": [
+                "Trefis Team"
+            ],
+            "summary": "L3Harris Technologies (LHX) stock has surged by nearly 70% over the past year, primarily due to a significant jump in its P/E multiple and strong defense contracts contributing to a massive backlog. Despite this impressive growth, the stock recently pulled back 9% following a Q4 revenue miss, leading to investor caution. The future performance hinges on whether the record backlog and demand can offset near-term challenges like margin pressure and operational stumbles at its Aerojet Rocketdyne subsidiary.",
+            "banner_image": "https://s3.amazonaws.com/wp-uploads-trefis/articles/wp-content/uploads/2025/10/27050432/why_stock_moved_up-300x300.png",
+            "source": "Trefis",
+            "category_within_source": "General",
+            "source_domain": "Trefis",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.935204"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.834384"
+                }
+            ],
+            "overall_sentiment_score": 0.218381,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "LHX",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.199459",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "LMT",
+                    "relevance_score": "0.609197",
+                    "ticker_sentiment_score": "0.310123",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "GD",
+                    "relevance_score": "0.574510",
+                    "ticker_sentiment_score": "0.146065",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "DDGS Market Set for Dynamic Development with Key Players Archer",
+            "url": "https://www.openpr.com/news/4405728/ddgs-market-set-for-dynamic-development-with-key-players-archer",
+            "time_published": "20260226T064938",
+            "authors": [
+                "Ravina Pandya"
+            ],
+            "summary": "A new report titled \"DDGS Market\" by Coherent Market Insights Pvt. Ltd offers an in-depth analysis of the industry, including trends, growth drivers, challenges, and opportunities from 2026-2033. Key players like POET LLC, Archer Daniels Midland Company, and Cargill are highlighted. The report covers market segmentation across various applications such as animal feed, biofuels, food and beverage, and pharmaceuticals, providing valuable insights for strategic decision-making.",
+            "banner_image": "https://cdn.open-pr.com/L/2/L226879362_g.jpg",
+            "source": "openPR.com",
+            "category_within_source": "General",
+            "source_domain": "openPR.com",
+            "topics": [
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.723589"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.642042"
+                },
+                {
+                    "topic": "manufacturing",
+                    "relevance_score": "0.633393"
+                }
+            ],
+            "overall_sentiment_score": 0.208785,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "ADM",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.283278",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "VLO",
+                    "relevance_score": "0.745501",
+                    "ticker_sentiment_score": "0.223822",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "BG",
+                    "relevance_score": "0.655784",
+                    "ticker_sentiment_score": "0.247767",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "CVX",
+                    "relevance_score": "0.616642",
+                    "ticker_sentiment_score": "0.237374",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "HRL",
+                    "relevance_score": "0.586111",
+                    "ticker_sentiment_score": "0.213406",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Tevogen Bio Shareholders Approve Reverse Split Authorization",
+            "url": "https://www.tipranks.com/news/company-announcements/tevogen-bio-shareholders-approve-reverse-split-authorization",
+            "time_published": "20260226T064627",
+            "authors": [
+                "TipRanks Auto-Generated Newsdesk"
+            ],
+            "summary": "Tevogen Bio Holdings shareholders approved an amendment to the company's 2024 equity incentive plan and authorized a flexible reverse stock split at a ratio between 1-for-25 and 1-for-85, to be implemented at the board's discretion. Both proposals received strong support, aimed at adjusting the capital structure and equity incentives. TipRanks' AI Analyst, Spark, rates TVGN as Neutral due to very weak financial performance and a strong downtrend in technicals.",
+            "banner_image": "https://blog.tipranks.com/wp-content/uploads/2022/09/shutterstock_1931544818-750x406.jpg",
+            "source": "TipRanks",
+            "category_within_source": "General",
+            "source_domain": "TipRanks",
+            "topics": [
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.907324"
+                },
+                {
+                    "topic": "life_sciences",
+                    "relevance_score": "0.840216"
+                }
+            ],
+            "overall_sentiment_score": -0.267711,
+            "overall_sentiment_label": "Somewhat-Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "TVGN",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.277560",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "Philip Morris International Inc. (NYSE:PM) Given Average Rating of \"Moderate Buy\" by Brokerages",
+            "url": "https://www.marketbeat.com/instant-alerts/philip-morris-international-inc-nysepm-given-average-rating-of-moderate-buy-by-brokerages-2026-02-26/",
+            "time_published": "20260226T064010",
+            "authors": [
+                "MarketBeat"
+            ],
+            "summary": "Philip Morris International (NYSE:PM) has received a consensus \"Moderate Buy\" rating from brokerages, with an average 1-year price target of $196.83. The company reported quarterly EPS in line with estimates and revenue slightly below, while also declaring a quarterly dividend of $1.47, representing an annualized yield of 3.1%. Institutional investors hold a significant portion of the company's stock, and several analysts have recently updated their ratings and price targets.",
+            "banner_image": "https://www.marketbeat.com/logos/philip-morris-international-inc-logo-1200x675.png?v=20221020155554",
+            "source": "MarketBeat",
+            "category_within_source": "General",
+            "source_domain": "MarketBeat",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.941506"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.740447"
+                }
+            ],
+            "overall_sentiment_score": 0.341319,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "PM",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.323268",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Coterra Energy Inc. (NYSE:CTRA) Receives Average Rating of \"Moderate Buy\" from Brokerages",
+            "url": "https://www.marketbeat.com/instant-alerts/coterra-energy-inc-nysectra-receives-average-rating-of-moderate-buy-from-brokerages-2026-02-26/",
+            "time_published": "20260226T064004",
+            "authors": [
+                "MarketBeat"
+            ],
+            "summary": "Coterra Energy Inc. (NYSE:CTRA) has received an average rating of \"Moderate Buy\" from 23 brokerages, with a consensus 12-month price target of $33.48. Fifteen analysts recommend \"buy,\" seven \"hold,\" and one \"sell.\" Institutional investors hold a significant 87.92% of the shares, with several hedge funds increasing their stakes recently.",
+            "banner_image": "https://www.marketbeat.com/logos/coterra-energy-inc-logo-1200x675.jpg?v=20211104092410",
+            "source": "MarketBeat",
+            "category_within_source": "General",
+            "source_domain": "MarketBeat",
+            "topics": [
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.931497"
+                },
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.845219"
+                },
+                {
+                    "topic": "energy_transportation",
+                    "relevance_score": "0.726695"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.645999"
+                }
+            ],
+            "overall_sentiment_score": 0.210892,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "CTRA",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.279860",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "DVN",
+                    "relevance_score": "0.643531",
+                    "ticker_sentiment_score": "0.158623",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Assessing Skyworks Solutions (SWKS) Valuation After Mixed Share Price Performance And Undervalued Narrative",
+            "url": "https://simplywall.st/stocks/us/semiconductors/nasdaq-swks/skyworks-solutions/news/assessing-skyworks-solutions-swks-valuation-after-mixed-shar",
+            "time_published": "20260226T063724",
+            "authors": [
+                "Simply Wall St"
+            ],
+            "summary": "Skyworks Solutions (SWKS) shares have shown mixed performance recently, with a flat past month and negative returns over three months and a year despite reported revenues of US$4,053.8m and net income of US$394.3m. A popular narrative suggests the company is 23.7% undervalued with a fair value of $78.40, driven by growth in IoT, automotive, and industrial applications. However, this valuation relies on diversification beyond mobile and faces risks like heavy reliance on a single mobile customer and potential competition.",
+            "banner_image": null,
+            "source": "Simply Wall Street",
+            "category_within_source": "General",
+            "source_domain": "Simply Wall Street",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.930193"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.810211"
+                },
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.721454"
+                }
+            ],
+            "overall_sentiment_score": 0.123429,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "SWKS",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.122186",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "NVDA",
+                    "relevance_score": "0.645648",
+                    "ticker_sentiment_score": "0.127200",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AVGO",
+                    "relevance_score": "0.615174",
+                    "ticker_sentiment_score": "0.137410",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "A Look At Camden Property Trust (CPT) Valuation After Mixed Recent Share Performance",
+            "url": "https://simplywall.st/stocks/us/real-estate/nyse-cpt/camden-property-trust/news/a-look-at-camden-property-trust-cpt-valuation-after-mixed-re",
+            "time_published": "20260226T063702",
+            "authors": [
+                "Simply Wall St"
+            ],
+            "summary": "Camden Property Trust (CPT) has experienced mixed share performance recently, with its unit price around $108.84. Despite a 90-day return of 2.65%, its one-year return shows a 6.66% decline. Simply Wall St's analysis suggests CPT is undervalued at $115.48, driven by strong apartment demand and revenue growth prospects, though its P/E ratio is higher than the industry average, indicating potential risks if growth targets are not met.",
+            "banner_image": null,
+            "source": "Simply Wall Street",
+            "category_within_source": "General",
+            "source_domain": "Simply Wall Street",
+            "topics": [
+                {
+                    "topic": "real_estate",
+                    "relevance_score": "0.901243"
+                }
+            ],
+            "overall_sentiment_score": 0.431587,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "CPT",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.435472",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "A Look At Toro (TTC) Valuation After Four Straight Earnings Surprises And Upward Estimate Revisions",
+            "url": "https://simplywall.st/stocks/us/capital-goods/nyse-ttc/toro/news/a-look-at-toro-ttc-valuation-after-four-straight-earnings-su",
+            "time_published": "20260226T063700",
+            "authors": [
+                "Simply Wall St"
+            ],
+            "summary": "Toro (TTC) has garnered attention due to four consecutive positive earnings surprises and recent upward estimate revisions, impacting investor perception. The stock has seen strong short-term momentum, gaining 10.92% in 30 days and 40.68% in 90 days, though its 1-year return is 25.55% against a softer 3-year return of 5.84%. Despite this rally pushing the share price to US$99.01, close to its fair value estimate of US$92.60, the article notes that Toro is still considered 6.9% overvalued, with its valuation supported by investments in smart solutions and potential future premium growth, alongside risks from residential demand, weather, and tariffs.",
+            "banner_image": null,
+            "source": "Simply Wall Street",
+            "category_within_source": "General",
+            "source_domain": "Simply Wall Street",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.924814"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.835941"
+                }
+            ],
+            "overall_sentiment_score": 0.193185,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "TTC",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.163548",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Sweet Potato Market Size 2026: Global Share, Industry And Report",
+            "url": "https://www.openpr.com/news/4405720/sweet-potato-market-size-2026-global-share-industry-and-report",
+            "time_published": "20260226T063046",
+            "authors": [
+                "Money Singh"
+            ],
+            "summary": "The report titled \"Sweet Potato Market\" by Coherent Market Insights analyzes the market from 2026-2033, covering trends, growth drivers, challenges, opportunities, and competitive landscapes. It provides industry insights, competitor analysis, and regional evaluations, highlighting key players like Nutrien Ltd., McCain Foods Limited, and Lamb Weston Holdings Inc. The research methodology includes both primary and secondary research to provide comprehensive and accurate data for strategic decision-making.",
+            "banner_image": "https://cdn.open-pr.com/L/2/L226347269_g.jpg",
+            "source": "openPR.com",
+            "category_within_source": "General",
+            "source_domain": "openPR.com",
+            "topics": [
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.805446"
+                },
+                {
+                    "topic": "retail_wholesale",
+                    "relevance_score": "0.706886"
+                }
+            ],
+            "overall_sentiment_score": 0.336989,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "LW",
+                    "relevance_score": "0.948003",
+                    "ticker_sentiment_score": "0.342234",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "CAG",
+                    "relevance_score": "0.732536",
+                    "ticker_sentiment_score": "0.336469",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "HRL",
+                    "relevance_score": "0.603835",
+                    "ticker_sentiment_score": "0.349516",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MKC",
+                    "relevance_score": "0.614327",
+                    "ticker_sentiment_score": "0.337139",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "SJM",
+                    "relevance_score": "0.627616",
+                    "ticker_sentiment_score": "0.252068",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Arista Networks Stock Surged 50%, Here’s Why",
+            "url": "https://www.trefis.com/stock/anet/articles2/591633/arista-networks-stock-surged-50-heres-why/2026-02-26",
+            "time_published": "20260226T062543",
+            "authors": [
+                "Trefis Team"
+            ],
+            "summary": "Arista Networks (ANET) stock surged 53% over nine months due to a 21% revenue increase driven by demand from AI and cloud giants, despite a slight dip in net income margin. While the company achieved record profitability, concerns linger regarding customer concentration with two \"AI Titan\" customers and a decrease in gross margin. Post-earnings, the stock experienced a pullback, suggesting market caution regarding valuation and dependency on these major clients.",
+            "banner_image": "https://s3.amazonaws.com/wp-uploads-trefis/articles/wp-content/uploads/2025/10/27050432/why_stock_moved_up-300x300.png",
+            "source": "Trefis",
+            "category_within_source": "General",
+            "source_domain": "Trefis",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.941947"
+                },
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.821724"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.749127"
+                }
+            ],
+            "overall_sentiment_score": 0.17338,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "ANET",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.300109",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MSFT",
+                    "relevance_score": "0.637659",
+                    "ticker_sentiment_score": "0.105200",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AVGO",
+                    "relevance_score": "0.631385",
+                    "ticker_sentiment_score": "0.128912",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Kroger (KR) Expected to Announce Quarterly Earnings on Thursday",
+            "url": "https://www.marketbeat.com/instant-alerts/kroger-kr-expected-to-announce-quarterly-earnings-on-thursday-2026-02-26/",
+            "time_published": "20260226T062542",
+            "authors": [
+                "MarketBeat"
+            ],
+            "summary": "Kroger (KR) is scheduled to release its Q4 2026 earnings before the market opens on Thursday, March 5th, with analysts forecasting EPS of $1.20 and revenue of $35.10 billion. The company's new CEO, Greg Foran, is expected to focus on cost-cutting and margin improvement, though recent analyst downgrades and a high dividend payout ratio of 129.6% present mixed sentiment. Kroger also recently announced a quarterly dividend of $0.35, with the stock currently trading at a P/E ratio of 62.57.",
+            "banner_image": "https://www.marketbeat.com/logos/the-kroger-co-logo-1200x675.png?v=20221101143339",
+            "source": "MarketBeat",
+            "category_within_source": "General",
+            "source_domain": "MarketBeat",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "1.000000"
+                },
+                {
+                    "topic": "retail_wholesale",
+                    "relevance_score": "0.909944"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.846459"
+                }
+            ],
+            "overall_sentiment_score": -0.040395,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "KR",
+                    "relevance_score": "0.998333",
+                    "ticker_sentiment_score": "-0.065205",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "WMT",
+                    "relevance_score": "0.631547",
+                    "ticker_sentiment_score": "0.278623",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "C",
+                    "relevance_score": "0.594077",
+                    "ticker_sentiment_score": "-0.206031",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "MS",
+                    "relevance_score": "0.593055",
+                    "ticker_sentiment_score": "-0.200578",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "JPM",
+                    "relevance_score": "0.550377",
+                    "ticker_sentiment_score": "0.131365",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Packaging Corp of America: The Boring Stock Gen Z Traders Are Quietly Hoarding",
+            "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/packaging-corp-of-america-the-boring-stock-gen-z-traders-are-quietly/68613382",
+            "time_published": "20260226T062207",
+            "authors": [],
+            "summary": "Packaging Corp of America (NYSE: PKG) is highlighted as a \"boring but pays you\" stock attracting Gen Z traders due to its consistent earnings, stable dividends, and essential role in e-commerce and logistics. Despite not being a high-growth stock, its focus on US manufacturing and steady demand for packaging makes it a reliable, income-friendly investment, contrasting with more speculative market trends. The article positions PKG as a defensive asset benefiting from real-world demand and disciplined cost control.",
+            "banner_image": null,
+            "source": "AD HOC NEWS",
+            "category_within_source": "General",
+            "source_domain": "AD HOC NEWS",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.901960"
+                },
+                {
+                    "topic": "manufacturing",
+                    "relevance_score": "0.841751"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.726631"
+                },
+                {
+                    "topic": "retail_wholesale",
+                    "relevance_score": "0.749181"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.720639"
+                }
+            ],
+            "overall_sentiment_score": 0.354314,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "PKG",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.455246",
+                    "ticker_sentiment_label": "Bullish"
+                },
+                {
+                    "ticker": "AMZN",
+                    "relevance_score": "0.607995",
+                    "ticker_sentiment_score": "0.240178",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "How Ford's Q4 Shows More Profits on the Way",
+            "url": "https://www.fool.com/investing/2026/02/26/how-fords-q4-shows-more-profits-on-the-way/",
+            "time_published": "20260226T060520",
+            "authors": [
+                "Daniel Miller"
+            ],
+            "summary": "Ford's Q4 results hinted at future profitability despite potentially disappointing some investors. The company achieved record revenue in 2025 and is strategically shifting focus to more profitable gasoline, SUV, truck, and hybrid vehicles, while reducing costs and improving margins. Ford Pro, the commercial business unit, stands out as a key driver of higher profitability with strong EBIT and growing software subscriptions.",
+            "banner_image": "https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F856736%2F2022-mustang-mach-e-ice-white-appearance-package_01.jpg&w=3840&op=resize",
+            "source": "The Motley Fool",
+            "category_within_source": "General",
+            "source_domain": "The Motley Fool",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.949857"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.827865"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.600600"
+                },
+                {
+                    "topic": "energy_transportation",
+                    "relevance_score": "0.717922"
+                },
+                {
+                    "topic": "manufacturing",
+                    "relevance_score": "0.644438"
+                }
+            ],
+            "overall_sentiment_score": 0.223971,
+            "overall_sentiment_label": "Somewhat-Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "F",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.324172",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "GM",
+                    "relevance_score": "0.646836",
+                    "ticker_sentiment_score": "0.115770",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Would You Still Hold ServiceNow Stock If It Fell Another 30%?",
+            "url": "https://www.trefis.com/stock/now/articles2/591601/would-you-still-hold-servicenow-stock-if-it-fell-another-30/2026-02-26",
+            "time_published": "20260226T060500",
+            "authors": [
+                "Trefis Team"
+            ],
+            "summary": "ServiceNow (NOW) stock has recently dropped 23.6%, raising concerns about its subscription growth and AI disruption. Despite a \"Very Strong operational performance\" and \"High valuation,\" making it \"Fairly Priced,\" the article examines the stock's resilience during past economic downturns, including the 2022 Inflation Shock, 2020 Covid Pandemic, and 2018 Correction, finding it recovered well. Trefis suggests a portfolio approach for investors feeling jittery about individual stock fluctuations.",
+            "banner_image": "https://s3.amazonaws.com/wp-uploads-trefis/articles/wp-content/uploads/2025/09/30062457/How-Low-Can-It-Go-300x200.png",
+            "source": "Trefis",
+            "category_within_source": "General",
+            "source_domain": "Trefis",
+            "topics": [
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.927025"
+                },
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.809721"
+                }
+            ],
+            "overall_sentiment_score": 0.04945,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "NOW",
+                    "relevance_score": "0.306458",
+                    "ticker_sentiment_score": "0.008216",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "Colgate to Defend DEI-Based Board Selection Criteria Amid Shareholder Challenge",
+            "url": "https://www.globalcosmeticsnews.com/colgate-to-defend-dei-based-board-selection-criteria-amid-shareholder-challenge/",
+            "time_published": "20260226T060457",
+            "authors": [
+                "Global Cosmetics News"
+            ],
+            "summary": "Colgate-Palmolive plans to defend its use of diversity, equity, and inclusion (DEI) criteria for board member selection against a shareholder proposal aiming to eliminate the practice. The company asserts that considering attributes like race, gender, and sexual orientation is crucial for global business performance, innovation, and anticipating consumer trends, especially since two-thirds of its sales are outside the U.S. This stance comes as other major corporations are scaling back explicit DEI language in their board selection policies.",
+            "banner_image": "https://www.globalcosmeticsnews.com/wp-content/uploads/2025/09/Colgate-Palmolive-Smile.jpg",
+            "source": "Global Cosmetics News",
+            "category_within_source": "General",
+            "source_domain": "Global Cosmetics News",
+            "topics": [
+                {
+                    "topic": "retail_wholesale",
+                    "relevance_score": "0.937987"
+                }
+            ],
+            "overall_sentiment_score": -0.209307,
+            "overall_sentiment_label": "Somewhat-Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "CL",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.196165",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "AXP",
+                    "relevance_score": "0.640846",
+                    "ticker_sentiment_score": "-0.199842",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "JNJ",
+                    "relevance_score": "0.626070",
+                    "ticker_sentiment_score": "-0.218133",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "DE",
+                    "relevance_score": "0.645625",
+                    "ticker_sentiment_score": "-0.198802",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                },
+                {
+                    "ticker": "GS",
+                    "relevance_score": "0.619097",
+                    "ticker_sentiment_score": "-0.176262",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "With Intuit Stock Sliding, Have You Assessed The Risk?",
+            "url": "https://www.trefis.com/stock/intu/articles2/591602/with-intuit-stock-sliding-have-you-assessed-the-risk/2026-02-26",
+            "time_published": "20260226T060238",
+            "authors": [
+                "Trefis Team"
+            ],
+            "summary": "Intuit (INTU) stock has recently fallen 32.1% due to concerns over AI disruption and slower core software growth. Despite this, the company has strong fundamentals, including 17.1% LTM revenue growth and a 26.7% operating margin, though it trades at a high valuation making it fairly priced. Historically, INTU has shown resilience during downturns, recovering effectively after significant drops, suggesting investors should consider its long-term stability.",
+            "banner_image": "https://s3.amazonaws.com/wp-uploads-trefis/articles/wp-content/uploads/2025/09/30062457/How-Low-Can-It-Go-300x200.png",
+            "source": "Trefis",
+            "category_within_source": "General",
+            "source_domain": "Trefis",
+            "topics": [
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.943323"
+                },
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.847646"
+                },
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.709743"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.629391"
+                }
+            ],
+            "overall_sentiment_score": 0.13586,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "INTU",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.145233",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "LHX",
+                    "relevance_score": "0.577981",
+                    "ticker_sentiment_score": "0.151144",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MCK",
+                    "relevance_score": "0.547941",
+                    "ticker_sentiment_score": "0.154009",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "AVGO",
+                    "relevance_score": "0.578882",
+                    "ticker_sentiment_score": "0.179344",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "ANET",
+                    "relevance_score": "0.551157",
+                    "ticker_sentiment_score": "0.194962",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Tigo Energy to Showcase New Software at 2026 Energy Transition Expo",
+            "url": "https://intellectia.ai/news/stock/tigo-energy-to-showcase-new-software-at-2026-energy-transition-expo",
+            "time_published": "20260226T055342",
+            "authors": [
+                "Emily J. Thompson"
+            ],
+            "summary": "Tigo Energy is set to unveil its new active commissioning software at the 2026 KEY Energy Transition Expo, aiming to streamline solar installations, from basic setups to advanced solar-plus-storage configurations. The software features over 20 enhancements for improving installer efficiency and product compatibility with the latest PV panels, positioning Tigo to capitalize on Italy's anticipated 6-8 GW solar capacity growth. Wall Street analysts maintain a \"Buy\" rating on TYGO stock, forecasting a rise based on the company's strong performance and international revenue generation.",
+            "banner_image": "https://intellectia.ai/_next/image?url=https%3A%2F%2Fd5bp8bijhhba2.cloudfront.net%2Fimage%2Fdefault_image%2Fbusinesswire.png&w=256&q=75",
+            "source": "Intellectia AI",
+            "category_within_source": "General",
+            "source_domain": "Intellectia AI",
+            "topics": [
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.817346"
+                },
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.814060"
+                },
+                {
+                    "topic": "energy_transportation",
+                    "relevance_score": "0.742460"
+                }
+            ],
+            "overall_sentiment_score": 0.423305,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "TYGO",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.440728",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Toyota Plans $19 Billion Share Sale, Reuters Reports",
+            "url": "https://www.bloomberg.com/news/articles/2026-02-26/toyota-plans-19-billion-share-sale-reuters-reports",
+            "time_published": "20260226T055302",
+            "authors": [
+                "Nicholas Takahashi"
+            ],
+            "summary": "Toyota Motor Corp. is reportedly planning to sell approximately ¥3 trillion ($19 billion) of strategic shareholdings currently held by banks and other financial institutions. This move is seen as a significant step towards corporate reform in Japan. The sale could occur as early as this year, although the scale and timing are subject to change.",
+            "banner_image": null,
+            "source": "Bloomberg",
+            "category_within_source": "General",
+            "source_domain": "Bloomberg",
+            "topics": [
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.920346"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.739486"
+                },
+                {
+                    "topic": "manufacturing",
+                    "relevance_score": "0.600348"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.621080"
+                }
+            ],
+            "overall_sentiment_score": 0.412892,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "TM",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.382989",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Veeco Instruments Q4 2025 Earnings Call Insights",
+            "url": "https://intellectia.ai/news/stock/veeco-instruments-q4-2025-earnings-call-insights",
+            "time_published": "20260226T055254",
+            "authors": [
+                "Emily J. Thompson"
+            ],
+            "summary": "Veeco Instruments reported Q4 2025 revenue of $165 million, with strong growth in its semiconductor segment driven by AI and high-performance computing demand, projecting 2026 revenue between $740 million and $800 million. The company's year-end backlog significantly increased to $555 million, reflecting accelerated order activity. An all-stock merger with Axcelis, expected to close in H2 2026, aims to create a leading semiconductor equipment company, enhancing R&D and market competitiveness despite anticipated gross margin pressures in 2026 due to product mix and tariffs.",
+            "banner_image": "https://intellectia.ai/_next/image?url=https%3A%2F%2Fd5bp8bijhhba2.cloudfront.net%2Fimage%2Fdefault_image%2Fseekingalpha_news.png&w=256&q=75",
+            "source": "Intellectia AI",
+            "category_within_source": "General",
+            "source_domain": "Intellectia AI",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.904280"
+                },
+                {
+                    "topic": "mergers_and_acquisitions",
+                    "relevance_score": "0.826328"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.706985"
+                },
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.610047"
+                }
+            ],
+            "overall_sentiment_score": 0.005863,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "VECO",
+                    "relevance_score": "0.338288",
+                    "ticker_sentiment_score": "0.039878",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "STMicroelectronics unveils second‑generation MasterGaN power IC",
+            "url": "https://www.newelectronics.co.uk/content/product-launches/stmicroelectronics-unveils-second-generation-mastergan-power-ic",
+            "time_published": "20260226T055243",
+            "authors": [
+                "Neil Tyler"
+            ],
+            "summary": "STMicroelectronics has launched MasterGaN6, the first device in its second-generation MasterGaN half-bridge family, expanding its GaN-based power device portfolio. This new integrated power package features an updated BCD driver and a high-performance gallium nitride (GaN) transistor with 140mΩ on-resistance, offering enhanced capabilities like fault indication and standby operation. Designed for both consumer and industrial applications, MasterGaN6 aims to simplify designs, reduce component count, and improve power efficiency.",
+            "banner_image": "https://www.newelectronics.co.uk/media/acrmjols/n4756d-feb-24-2026-mastergan6_image.jpg?width=10&quality=10&v=1dca69490835910",
+            "source": "New Electronics",
+            "category_within_source": "General",
+            "source_domain": "New Electronics",
+            "topics": [
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.946444"
+                }
+            ],
+            "overall_sentiment_score": 0.093248,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "STM",
+                    "relevance_score": "0.306989",
+                    "ticker_sentiment_score": "0.005254",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "ADM",
+                    "relevance_score": "0.623607",
+                    "ticker_sentiment_score": "0.135005",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "ADI",
+                    "relevance_score": "0.730220",
+                    "ticker_sentiment_score": "0.113514",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "SiriusPoint Ratings Upgraded to 'A' by Fitch",
+            "url": "https://intellectia.ai/news/stock/siriuspoint-ratings-upgraded-to-a-by-fitch",
+            "time_published": "20260226T055207",
+            "authors": [
+                "Emily J. Thompson"
+            ],
+            "summary": "Fitch has upgraded SiriusPoint's Insurer Financial Strength rating from A- to A and its Long-Term Issuer Default Rating from BBB to BBB+, reflecting significant improvements in the company's earnings and financial position. The upgrade highlights the company's strategic repositioning, strengthened capitalization, and solid underwriting results over the past three years. CEO Scott Egan views this as a positive endorsement, setting a strong foundation for continued growth in 2026.",
+            "banner_image": "https://intellectia.ai/_next/image?url=https%3A%2F%2Fd5bp8bijhhba2.cloudfront.net%2Fimage%2Fdefault_image%2Fnewsfilter.png&w=256&q=75",
+            "source": "Intellectia AI",
+            "category_within_source": "General",
+            "source_domain": "Intellectia AI",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.947099"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.829497"
+                }
+            ],
+            "overall_sentiment_score": 0.429006,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "SPNT",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.411288",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Cottage cheese sold at Walmart recalled due to potential health risk",
+            "url": "https://www.wlbt.com/2026/02/26/cottage-cheese-sold-walmart-recalled-due-potential-health-risk/",
+            "time_published": "20260226T055154",
+            "authors": [
+                "Kali O'Rourke"
+            ],
+            "summary": "Several Great Value brand cottage cheese products sold at Walmart are being recalled due to possible incomplete pasteurization of liquid dairy ingredients, posing a health risk. The affected products, sold between Feb. 17 and Feb. 20 in 24 states, include various fat content small curd cottage cheeses with specific \"best if used by\" dates. No illnesses have been reported, and customers are advised to dispose of or return the products for a refund.",
+            "banner_image": "https://gray-wlbt-prod.gtv-cdn.com/resizer/v2/https%3A%2F%2Fdo0bihdskp9dy.cloudfront.net%2F02-26-2026%2Ft_10ca11feec98477cb6964273664d907d_name_file_1280x720_2000_v3_1_.jpg?auth=5a893e3c98c45d207de368a8b6edec8f71f4ab2c103bc84d4e35429f76519406&width=800&height=450&smart=true",
+            "source": "WLBT",
+            "category_within_source": "General",
+            "source_domain": "WLBT",
+            "topics": [
+                {
+                    "topic": "retail_wholesale",
+                    "relevance_score": "0.838671"
+                }
+            ],
+            "overall_sentiment_score": -0.289413,
+            "overall_sentiment_label": "Somewhat-Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "WMT",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.297137",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "Short Interest in Spark I Acquisition Corporation (NASDAQ:SPKL) Expands By 409.9%",
+            "url": "https://www.marketbeat.com/instant-alerts/short-interest-in-spark-i-acquisition-corporation-nasdaqspkl-expands-by-4099-2026-02-25/",
+            "time_published": "20260226T054718",
+            "authors": [
+                "MarketBeat"
+            ],
+            "summary": "Short interest in Spark I Acquisition Corporation (NASDAQ:SPKL) surged by 409.9% to 515 shares as of February 13th, though this still represents only about 0.0% of shares outstanding. The company has a \"Sell\" rating from Weiss Ratings and an average \"Sell\" rating according to MarketBeat. Institutional investors have increased their holdings, with major new stakes purchased by several firms, bringing institutional ownership to approximately 34.9% of the company's stock.",
+            "banner_image": "https://www.marketbeat.com/logos/spark-i-acquisition-co-logo-1200x675.jpg?v=20250303125641",
+            "source": "MarketBeat",
+            "category_within_source": "General",
+            "source_domain": "MarketBeat",
+            "topics": [
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.946346"
+                },
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.730196"
+                }
+            ],
+            "overall_sentiment_score": -0.339695,
+            "overall_sentiment_label": "Somewhat-Bearish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "SPKL",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "-0.348560",
+                    "ticker_sentiment_label": "Somewhat-Bearish"
+                }
+            ]
+        },
+        {
+            "title": "Is Q4 2025 Earnings Pressure on Margins and Growth Altering The Investment Case For Monster Beverage (MNST)?",
+            "url": "https://simplywall.st/stocks/us/food-beverage-tobacco/nasdaq-mnst/monster-beverage/news/is-q4-2025-earnings-pressure-on-margins-and-growth-altering",
+            "time_published": "20260226T053859",
+            "authors": [
+                "Simply Wall St",
+                "Sasha Jovanovic"
+            ],
+            "summary": "Monster Beverage reported its Q4 2025 earnings, with investors focusing on revenue trends and margin performance in its core energy drink business, alongside international growth and cost control. Despite previous analyst upgrades and a push towards 52-week highs, the report will determine if the company can maintain its leadership and justify its premium valuation. The article emphasizes comparing bullish analyst assumptions with more cautious views, highlighting potential risks from input costs and new drink taxes.",
+            "banner_image": null,
+            "source": "Simply Wall St",
+            "category_within_source": "General",
+            "source_domain": "Simply Wall St",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.923584"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.842934"
+                }
+            ],
+            "overall_sentiment_score": 0.000821,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "MNST",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.032519",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "KO",
+                    "relevance_score": "0.618074",
+                    "ticker_sentiment_score": "0.049751",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "PEP",
+                    "relevance_score": "0.623394",
+                    "ticker_sentiment_score": "0.038409",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        },
+        {
+            "title": "How Investors May Respond To Kraft Heinz (KHC) Halting Breakup And Reinvesting In Core U.S. Business",
+            "url": "https://simplywall.st/stocks/us/food-beverage-tobacco/nasdaq-khc/kraft-heinz/news/how-investors-may-respond-to-kraft-heinz-khc-halting-breakup",
+            "time_published": "20260226T053843",
+            "authors": [
+                "Simply Wall St",
+                "Sasha Jovanovic"
+            ],
+            "summary": "Kraft Heinz has appointed Nicolas Amaya as President, North America, and will reinvest approximately US$600 million into its core U.S. business, signaling a strategic shift from potential portfolio separation. This move aims to stabilize volumes and improve performance, with the success of the reinvestment hinging on Amaya's execution in North America amidst concerns over persistent weak volumes and the company's significant debt. Investors will be watching closely to see if this renewed focus can offset previous challenges and drive the projected revenue and earnings growth by 2028.",
+            "banner_image": null,
+            "source": "Simply Wall St",
+            "category_within_source": "General",
+            "source_domain": "Simply Wall St",
+            "topics": [
+                {
+                    "topic": "earnings",
+                    "relevance_score": "0.915660"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.812647"
+                },
+                {
+                    "topic": "retail_wholesale",
+                    "relevance_score": "0.743360"
+                },
+                {
+                    "topic": "economy_macro",
+                    "relevance_score": "0.618388"
+                }
+            ],
+            "overall_sentiment_score": 0.10521,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "KHC",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.284419",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                },
+                {
+                    "ticker": "MDLZ",
+                    "relevance_score": "0.564636",
+                    "ticker_sentiment_score": "0.039127",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "HSY",
+                    "relevance_score": "0.559643",
+                    "ticker_sentiment_score": "0.041002",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "KO",
+                    "relevance_score": "0.568002",
+                    "ticker_sentiment_score": "-0.110864",
+                    "ticker_sentiment_label": "Neutral"
+                },
+                {
+                    "ticker": "AMD",
+                    "relevance_score": "0.584388",
+                    "ticker_sentiment_score": "0.247410",
+                    "ticker_sentiment_label": "Somewhat-Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Broadridge Financial: Frank Troise Named As President To Lead Global Capital Markets Transformation",
+            "url": "https://pulse2.com/broadridge-financial-frank-troise-named-as-president-to-lead-global-capital-markets-transformation/",
+            "time_published": "20260226T053755",
+            "authors": [
+                "Amit Chowdhry"
+            ],
+            "summary": "Broadridge Financial Solutions has appointed Frank Troise as President, Global Capital Markets, effective immediately, to lead the company's strategy in integrating traditional and digital market infrastructure. Troise previously enhanced Broadridge's platform capabilities and expanded front-office offerings as Head of Trading and Connectivity Solutions. This appointment comes as Broadridge aims to accelerate innovation in global capital markets, leveraging its leadership in tokenized real assets and AI-powered capabilities.",
+            "banner_image": null,
+            "source": "Pulse 2.0",
+            "category_within_source": "General",
+            "source_domain": "Pulse 2.0",
+            "topics": [
+                {
+                    "topic": "finance",
+                    "relevance_score": "0.930615"
+                },
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.810595"
+                },
+                {
+                    "topic": "technology",
+                    "relevance_score": "0.702183"
+                },
+                {
+                    "topic": "blockchain",
+                    "relevance_score": "0.613515"
+                }
+            ],
+            "overall_sentiment_score": 0.497253,
+            "overall_sentiment_label": "Bullish",
+            "ticker_sentiment": [
+                {
+                    "ticker": "BR",
+                    "relevance_score": "1.000000",
+                    "ticker_sentiment_score": "0.456124",
+                    "ticker_sentiment_label": "Bullish"
+                }
+            ]
+        },
+        {
+            "title": "Is Sony Group (TSE:6758) Fairly Priced After Recent Share Price Weakness?",
+            "url": "https://simplywall.st/stocks/jp/consumer-durables/tse-6758/sony-group-shares/news/is-sony-group-tse6758-fairly-priced-after-recent-share-price",
+            "time_published": "20260226T053702",
+            "authors": [
+                "Simply Wall St",
+                "Bailey Pemberton"
+            ],
+            "summary": "Sony Group's share price decline of 19.3% year-to-date prompts an analysis of its valuation. A Discounted Cash Flow (DCF) model suggests the shares are about 8.0% overvalued at ¥3,292, leading to a \"ABOUT RIGHT\" assessment. However, based on the P/E ratio of 15.8x compared to a proprietary \"Fair Ratio\" of 26.0x, Sony Group screens as \"UNDERVALUED.\"",
+            "banner_image": "https://images.ctfassets.net/n07nr2koi959/6YVpCWgrk0c9DenG6UgW8m/d79e37d527c71a95e08b9ce1071ba986/Image_from_iOS.jpg?fit=thumb&w=64&h=64",
+            "source": "Simply Wall St",
+            "category_within_source": "General",
+            "source_domain": "Simply Wall St",
+            "topics": [
+                {
+                    "topic": "financial_markets",
+                    "relevance_score": "0.939657"
+                }
+            ],
+            "overall_sentiment_score": 0.026203,
+            "overall_sentiment_label": "Neutral",
+            "ticker_sentiment": [
+                {
+                    "ticker": "SONY",
+                    "relevance_score": "0.306400",
+                    "ticker_sentiment_score": "0.040571",
+                    "ticker_sentiment_label": "Neutral"
+                }
+            ]
+        }
+    ]
+}

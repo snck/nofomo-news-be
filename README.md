@@ -5,14 +5,16 @@ ZenNews is a financial news aggregation pipeline that fetches articles from [Fin
 ## How it works
 
 ```
-FinnHub API → fetcher → PostgreSQL + Redis queue
+FinnHub API ↘
+              fetcher → PostgreSQL + Redis queue
+Alpha Vantage ↗
                                    ↓
                              transformer → PostgreSQL
                                                     ↑
                                                API (port 8080)
 ```
 
-1. **fetcher** — pulls the latest market news from FinnHub, saves articles to PostgreSQL, and pushes their IDs to a Redis queue
+1. **fetcher** — pulls the latest market news from FinnHub and/or Alpha Vantage (whichever keys are configured), saves articles to PostgreSQL, and pushes their IDs to a Redis queue
 2. **transformer** — reads from the queue, rewrites each article using an LLM (OpenAI or Anthropic), and saves the result back to PostgreSQL
 3. **api** — serves the transformed articles over HTTP
 
@@ -21,7 +23,7 @@ FinnHub API → fetcher → PostgreSQL + Redis queue
 - Go 1.21+
 - PostgreSQL
 - Redis
-- A [FinnHub API key](https://finnhub.io)
+- A [FinnHub API key](https://finnhub.io) and/or an [Alpha Vantage API key](https://www.alphavantage.co)
 - An OpenAI or Anthropic API key
 
 ## Setup
@@ -41,6 +43,7 @@ The migration creates all tables, indexes, and seeds the category list.
 DATABASE_URL=postgres://user:password@localhost:5432/zen_news?sslmode=require
 REDIS_URL=localhost:6379
 FINNHUB_API_KEY=your_finnhub_key
+ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
 OPENAI_API_KEY=your_openai_key
 ANTHROPIC_API_KEY=your_anthropic_key
 ```
