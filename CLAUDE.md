@@ -47,6 +47,7 @@ go mod tidy
 | `REDIS_URL` | `localhost:6379` | Fetcher, Transformer |
 | `FINNHUB_API_KEY` | — | Fetcher |
 | `ALPHA_VANTAGE_API_KEY` | — | Fetcher |
+| `MASSIVE_API_KEY` | — | Fetcher |
 | `OPENAI_API_KEY` | — | Transformer (if using OpenAI) |
 | `ANTHROPIC_API_KEY` | — | Transformer (if using Anthropic) |
 
@@ -55,9 +56,9 @@ go mod tidy
 ZenNews is a financial news aggregation and transformation pipeline with three independent services:
 
 ```
-FinnHub API ↘
-              Fetcher → PostgreSQL + Redis queue
-Alpha Vantage ↗
+FinnHub API      ↘
+Alpha Vantage API → Fetcher → PostgreSQL + Redis queue
+Massive API      ↗
                                     ↓
                               Transformer → PostgreSQL (transformed articles)
                                                       ↑
@@ -67,7 +68,7 @@ Alpha Vantage ↗
 ### Services (`cmd/`)
 
 - **`api`** — Gin REST API on port 8080. CORS allows `http://localhost:3000`. Read-only endpoints.
-- **`fetcher`** — Pulls articles from FinnHub and/or Alpha Vantage (whichever API keys are set), saves to `original_article`, pushes article IDs to Redis queue `zennews:queue:transform`.
+- **`fetcher`** — Pulls articles from FinnHub, Alpha Vantage, and/or Massive (whichever API keys are set), saves to `original_article`, pushes article IDs to Redis queue `zennews:queue:transform`.
 - **`transformer`** — Blocking-pops from Redis queue (`BRPop` with 0 timeout), calls LLM, saves to `transformed_article`. Retries up to 3 times; failed articles go to `zennews:queue:failed`.
 
 ### API Endpoints
@@ -100,4 +101,4 @@ Article status lifecycle: `pending` → `processing` → `completed` / `failed`.
 
 ### News Integration (`pkg/news/`)
 
-`NewsClient` interface with two implementations: FinnHub (`finnhub.go`) and Alpha Vantage (`alphavantage.go`). The fetcher activates whichever clients have API keys configured. FinnHub fetches from the `general` market news category; Alpha Vantage uses the `NEWS_SENTIMENT` endpoint. Each article may include related stock symbols, stored in `article_symbol`.
+`NewsClient` interface with three implementations: FinnHub (`finnhub.go`), Alpha Vantage (`alphavantage.go`), and Massive (`massive.go`). The fetcher activates whichever clients have API keys configured. FinnHub fetches from the `general` market news category; Alpha Vantage uses the `NEWS_SENTIMENT` endpoint; Massive uses the `/v2/reference/news` endpoint. Each article may include related stock symbols, stored in `article_symbol`.

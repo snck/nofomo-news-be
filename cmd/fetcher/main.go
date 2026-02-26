@@ -38,6 +38,9 @@ func main() {
 	if key := os.Getenv("ALPHA_VANTAGE_API_KEY"); key != "" {
 		clients = append(clients, news.NewAlphaVantageClient(key))
 	}
+	if key := os.Getenv("MASSIVE_API_KEY"); key != "" {
+		clients = append(clients, news.NewMassiveClient(key))
+	}
 
 	if len(clients) == 0 {
 		slog.Error("no news source API keys configured")
