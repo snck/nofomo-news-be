@@ -12,6 +12,7 @@ import (
 type SummaryStore interface {
 	GetSummaries(limit, offset int) ([]model.NewsSummary, error)
 	GetSummaryTotal() (int, error)
+	GetLatestSummary() (*model.NewsSummary, error)
 }
 
 type SummaryHandler struct {
@@ -88,4 +89,20 @@ func (h *SummaryHandler) GetSummaries(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, res)
+}
+
+func (h *SummaryHandler) GetLatestSummary(c *gin.Context) {
+	summary, err := h.repository.GetLatestSummary()
+	if err != nil {
+		slog.Error("error fetching latest summary", "error", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
+		return
+	}
+
+	if summary == nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "No summary available"})
+		return
+	}
+
+	c.JSON(http.StatusOK, toSummaryResponse(*summary))
 }

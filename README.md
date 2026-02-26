@@ -69,14 +69,16 @@ The fetcher is a one-shot command — run it on a schedule (e.g. cron) to keep a
 | `GET` | `/feed` | Paginated list of transformed articles |
 | `GET` | `/feed/:id` | Single article with original vs. transformed comparison |
 | `GET` | `/categories` | All available categories |
+| `GET` | `/summaries` | Paginated list of news summaries, latest first |
+| `GET` | `/summaries/latest` | Latest news summary only |
 | `GET` | `/health` | Service health check |
 
-### Query parameters for `/feed`
+### Query parameters for `/feed` and `/summaries`
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `limit` | `10` | Number of articles to return |
-| `offset` | `0` | Number of articles to skip |
+| `limit` | `10` | Number of items to return |
+| `offset` | `0` | Number of items to skip |
 
 ## Building
 

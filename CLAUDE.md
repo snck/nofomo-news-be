@@ -72,6 +72,8 @@ FinnHub API → Fetcher → PostgreSQL + Redis queue
 - `GET /feed` — Paginated transformed articles (`limit`, `offset` params)
 - `GET /feed/:id` — Single article with original vs. transformed comparison
 - `GET /categories` — All categories
+- `GET /summaries` — Paginated news summaries, latest first (`limit`, `offset` params)
+- `GET /summaries/latest` — Latest news summary only
 - `GET /health` — DB connectivity check
 
 ### LLM Integration (`pkg/llm/`)

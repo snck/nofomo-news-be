@@ -17,12 +17,14 @@ type fakeSummarytore struct {
 	summaries []model.NewsSummary
 	total     int
 	err       error
+	latest    *model.NewsSummary
 }
 
 func newTestSummaryRouter(store SummaryStore) *gin.Engine {
 	gin.SetMode(gin.TestMode)
 	r := gin.New()
 	h := NewSummaryHandler(store)
+	r.GET("/summaries/latest", h.GetLatestSummary)
 	r.GET("/summaries", h.GetSummaries)
 	return r
 }
@@ -33,6 +35,10 @@ func (f *fakeSummarytore) GetSummaries(limit int, offset int) ([]model.NewsSumma
 
 func (f *fakeSummarytore) GetSummaryTotal() (int, error) {
 	return f.total, f.err
+}
+
+func (f *fakeSummarytore) GetLatestSummary() (*model.NewsSummary, error) {
+	return f.latest, f.err
 }
 
 func TestGetSummaries_DBError(t *testing.T) {
@@ -67,6 +73,56 @@ func TestGetSummaries_Empty(t *testing.T) {
 	assert.Equal(t, nil, res.Latest)
 	assert.Equal(t, 0, len(res.History))
 	assert.Equal(t, 0, res.Total)
+}
+
+func TestGetLatestSummary_Found(t *testing.T) {
+	now := time.Now()
+	store := &fakeSummarytore{
+		latest: &model.NewsSummary{
+			ID:           3,
+			Paragraph:    "Latest summary",
+			Bullets:      []string{"Event A", "Event B"},
+			ArticleCount: 5,
+			CreatedAt:    now,
+		},
+	}
+
+	r := newTestSummaryRouter(store)
+
+	w := httptest.NewRecorder()
+	req := httptest.NewRequest("GET", "/summaries/latest", nil)
+	r.ServeHTTP(w, req)
+
+	assert.Equal(t, http.StatusOK, w.Code)
+
+	var res SummaryResponse
+	json.Unmarshal(w.Body.Bytes(), &res)
+	assert.Equal(t, "Latest summary", res.Paragraph)
+	assert.Equal(t, 2, len(res.Bullets))
+}
+
+func TestGetLatestSummary_NotFound(t *testing.T) {
+	store := &fakeSummarytore{latest: nil}
+
+	r := newTestSummaryRouter(store)
+
+	w := httptest.NewRecorder()
+	req := httptest.NewRequest("GET", "/summaries/latest", nil)
+	r.ServeHTTP(w, req)
+
+	assert.Equal(t, http.StatusNotFound, w.Code)
+}
+
+func TestGetLatestSummary_DBError(t *testing.T) {
+	store := &fakeSummarytore{err: errors.New("db down")}
+
+	r := newTestSummaryRouter(store)
+
+	w := httptest.NewRecorder()
+	req := httptest.NewRequest("GET", "/summaries/latest", nil)
+	r.ServeHTTP(w, req)
+
+	assert.Equal(t, http.StatusInternalServerError, w.Code)
 }
 
 func TestGetSummaries_WithResults(t *testing.T) {

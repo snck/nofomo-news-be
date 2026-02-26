@@ -48,6 +48,7 @@ func main() {
 	r.GET("/feed/:id", articleHandler.GetArticle)
 	r.GET("/feed", articleHandler.GetFeed)
 	r.GET("/categories", articleHandler.GetCategories)
+	r.GET("/summaries/latest", summaryHandler.GetLatestSummary)
 	r.GET("/summaries", summaryHandler.GetSummaries)
 	r.GET("/health", articleHandler.GetHealth)
 

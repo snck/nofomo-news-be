@@ -102,3 +102,28 @@ func (r *SummaryRepository) GetSummaryTotal() (int, error) {
 	err := r.db.QueryRow(`SELECT COUNT(*) FROM news_summary`).Scan(&total)
 	return total, err
 }
+
+func (r *SummaryRepository) GetLatestSummary() (*model.NewsSummary, error) {
+	var s model.NewsSummary
+	var bulletsJSON []byte
+	err := r.db.QueryRow(`
+		SELECT id, paragraph, bullets, article_count, from_article_id, to_article_id, model_used, created_at
+		FROM news_summary
+		ORDER BY created_at DESC
+		LIMIT 1
+	`).Scan(&s.ID, &s.Paragraph, &bulletsJSON, &s.ArticleCount, &s.FromArticleID, &s.ToArticleID, &s.ModelUsed, &s.CreatedAt)
+
+	if err == sql.ErrNoRows {
+		return nil, nil
+	}
+
+	if err != nil {
+		return nil, err
+	}
+
+	if err := json.Unmarshal(bulletsJSON, &s.Bullets); err != nil {
+		return nil, err
+	}
+
+	return &s, nil
+}
