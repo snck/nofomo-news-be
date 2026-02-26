@@ -393,6 +393,44 @@ func (r *ArticleRepository) GetSymbolsByOriginalIDs(ids []int64) (map[int64][]st
 	return result, nil
 }
 
+func (r *ArticleRepository) GetOriginalFeed(limit, offset int) ([]model.OriginalArticle, error) {
+	rows, err := r.db.Query(`
+		SELECT id, headline, detail, url, source, publisher, published_at, fetched_at, external_id, status
+		FROM original_article
+		ORDER BY published_at DESC
+		LIMIT $1 OFFSET $2
+	`, limit, offset)
+
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var articles []model.OriginalArticle
+	for rows.Next() {
+		var a model.OriginalArticle
+		err := rows.Scan(&a.ID, &a.Headline, &a.Detail, &a.URL, &a.Source, &a.Publisher, &a.PublishedAt, &a.FetchedAt, &a.ExternalID, &a.Status)
+		if err != nil {
+			return nil, err
+		}
+		articles = append(articles, a)
+	}
+
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+
+	return articles, nil
+}
+
+func (r *ArticleRepository) GetOriginalFeedTotal() (int, error) {
+	var total int
+	err := r.db.QueryRow(`
+		SELECT COUNT(*) FROM original_article
+	`).Scan(&total)
+	return total, err
+}
+
 func (r *ArticleRepository) GetErrorCount(id int64) (int, error) {
 	var count int
 	err := r.db.QueryRow(`

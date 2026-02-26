@@ -13,15 +13,19 @@ import (
 )
 
 type fakeStore struct {
-	feed       []model.FeedArticle
-	feedTotal  int
-	symbolMap  map[int64][]string
-	article    *model.SingleArticle
-	symbols    []string
-	categories []model.Category
-	err        error
-	gotLimit   int
-	gotOffset  int
+	feed            []model.FeedArticle
+	feedTotal       int
+	symbolMap       map[int64][]string
+	article         *model.SingleArticle
+	symbols         []string
+	categories      []model.Category
+	originalFeed    []model.OriginalArticle
+	originalTotal   int
+	originalErr     error
+	originalTotalErr error
+	err             error
+	gotLimit        int
+	gotOffset       int
 }
 
 func (f *fakeStore) GetFeed(limit int, offset int) ([]model.FeedArticle, error) {
@@ -50,6 +54,16 @@ func (f *fakeStore) GetAllCategories() ([]model.Category, error) {
 	return f.categories, f.err
 }
 
+func (f *fakeStore) GetOriginalFeed(limit int, offset int) ([]model.OriginalArticle, error) {
+	f.gotLimit = limit
+	f.gotOffset = offset
+	return f.originalFeed, f.originalErr
+}
+
+func (f *fakeStore) GetOriginalFeedTotal() (int, error) {
+	return f.originalTotal, f.originalTotalErr
+}
+
 func newTestRouter(store ArticleStore) *gin.Engine {
 	gin.SetMode(gin.TestMode)
 	r := gin.New()
@@ -58,6 +72,7 @@ func newTestRouter(store ArticleStore) *gin.Engine {
 	r.GET("/feed/:id", h.GetArticle)
 	r.GET("/categories", h.GetCategories)
 	r.GET("/health", h.GetHealth)
+	r.GET("/articles", h.GetOriginalFeed)
 	return r
 }
 
@@ -208,4 +223,72 @@ func TestGetHealth_Unhealthy(t *testing.T) {
 	var res map[string]string
 	json.Unmarshal(w.Body.Bytes(), &res)
 	assert.Equal(t, "unhealthy", res["status"])
+}
+
+func TestGetOriginalFeed_ReturnArticles(t *testing.T) {
+	store := &fakeStore{
+		originalFeed: []model.OriginalArticle{
+			{ID: 1, Headline: "Raw headline", Source: "FinnHub", Publisher: "Reuters"},
+		},
+		originalTotal: 1,
+		symbolMap:     map[int64][]string{1: {"AAPL", "MSFT"}},
+	}
+
+	r := newTestRouter(store)
+
+	w := httptest.NewRecorder()
+	req := httptest.NewRequest("GET", "/articles?limit=10&offset=0", nil)
+	r.ServeHTTP(w, req)
+
+	assert.Equal(t, http.StatusOK, w.Code)
+
+	var res OriginalFeedResponse
+	json.Unmarshal(w.Body.Bytes(), &res)
+	assert.Equal(t, 1, res.Total)
+	assert.Equal(t, 1, len(res.Articles))
+	assert.Equal(t, "Raw headline", res.Articles[0].Headline)
+	assert.Equal(t, "FinnHub", res.Articles[0].Source)
+	assert.Equal(t, "Reuters", res.Articles[0].Publisher)
+	assert.Equal(t, []string{"AAPL", "MSFT"}, res.Articles[0].Symbols)
+}
+
+func TestGetOriginalFeed_DBError(t *testing.T) {
+	store := &fakeStore{originalErr: errors.New("DB down"), originalTotal: 0}
+	r := newTestRouter(store)
+
+	w := httptest.NewRecorder()
+	req := httptest.NewRequest("GET", "/articles?limit=10&offset=0", nil)
+	r.ServeHTTP(w, req)
+
+	assert.Equal(t, http.StatusInternalServerError, w.Code)
+}
+
+func TestGetOriginalFeed_TotalDBError(t *testing.T) {
+	store := &fakeStore{originalTotalErr: errors.New("DB down")}
+	r := newTestRouter(store)
+
+	w := httptest.NewRecorder()
+	req := httptest.NewRequest("GET", "/articles?limit=10&offset=0", nil)
+	r.ServeHTTP(w, req)
+
+	assert.Equal(t, http.StatusInternalServerError, w.Code)
+}
+
+func TestGetOriginalFeed_DefaultPagination(t *testing.T) {
+	store := &fakeStore{
+		originalFeed:  []model.OriginalArticle{},
+		originalTotal: 0,
+	}
+	r := newTestRouter(store)
+
+	w := httptest.NewRecorder()
+	req := httptest.NewRequest("GET", "/articles", nil)
+	r.ServeHTTP(w, req)
+
+	assert.Equal(t, http.StatusOK, w.Code)
+
+	var res OriginalFeedResponse
+	json.Unmarshal(w.Body.Bytes(), &res)
+	assert.Equal(t, 10, res.Limit)
+	assert.Equal(t, 0, res.Offset)
 }

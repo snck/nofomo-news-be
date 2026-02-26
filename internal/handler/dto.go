@@ -41,3 +41,21 @@ type OriginalResponse struct {
 	Headline string `json:"headline"`
 	Detail   string `json:"detail"`
 }
+
+type OriginalArticleResponse struct {
+	ID          int64    `json:"id"`
+	Headline    string   `json:"headline"`
+	Detail      string   `json:"detail"`
+	URL         string   `json:"url"`
+	Source      string   `json:"source"`
+	Publisher   string   `json:"publisher"`
+	PublishedAt string   `json:"published_at"`
+	Symbols     []string `json:"symbols"`
+}
+
+type OriginalFeedResponse struct {
+	Articles []OriginalArticleResponse `json:"articles"`
+	Total    int                       `json:"total"`
+	Limit    int                       `json:"limit"`
+	Offset   int                       `json:"offset"`
+}

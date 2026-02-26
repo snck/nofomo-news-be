@@ -17,6 +17,8 @@ type ArticleStore interface {
 	GetTransformedByID(id int64) (*model.SingleArticle, error)
 	GetSymbolsByOriginalID(id int64) ([]string, error)
 	GetAllCategories() ([]model.Category, error)
+	GetOriginalFeed(limit, offset int) ([]model.OriginalArticle, error)
+	GetOriginalFeedTotal() (int, error)
 }
 
 type ArticleHandler struct {
@@ -181,6 +183,58 @@ func (h *ArticleHandler) GetHealth(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"status":   "healthy",
 		"database": "connected",
+	})
+}
+
+func (h *ArticleHandler) GetOriginalFeed(c *gin.Context) {
+	limit := getQueryLimit(c)
+	offset := getQueryOffset(c)
+
+	total, err := h.repository.GetOriginalFeedTotal()
+	if err != nil {
+		slog.Error("error fetching original feed total", "error", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
+		return
+	}
+
+	articles, err := h.repository.GetOriginalFeed(limit, offset)
+	if err != nil {
+		slog.Error("error fetching original feed", "error", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
+		return
+	}
+
+	var ids []int64
+	for _, a := range articles {
+		ids = append(ids, a.ID)
+	}
+
+	symbolMap, err := h.repository.GetSymbolsByOriginalIDs(ids)
+	if err != nil {
+		slog.Error("error fetching symbols", "error", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
+		return
+	}
+
+	var articleRes []OriginalArticleResponse
+	for _, a := range articles {
+		articleRes = append(articleRes, OriginalArticleResponse{
+			ID:          a.ID,
+			Headline:    a.Headline,
+			Detail:      a.Detail,
+			URL:         a.URL,
+			Source:      a.Source,
+			Publisher:   a.Publisher,
+			PublishedAt: a.PublishedAt.Format(time.RFC3339),
+			Symbols:     symbolMap[a.ID],
+		})
+	}
+
+	c.JSON(http.StatusOK, OriginalFeedResponse{
+		Articles: articleRes,
+		Total:    total,
+		Limit:    limit,
+		Offset:   offset,
 	})
 }
 
