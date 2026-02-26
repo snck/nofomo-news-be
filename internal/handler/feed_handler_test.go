@@ -20,9 +20,13 @@ type fakeStore struct {
 	symbols    []string
 	categories []model.Category
 	err        error
+	gotLimit   int
+	gotOffset  int
 }
 
 func (f *fakeStore) GetFeed(limit int, offset int) ([]model.FeedArticle, error) {
+	f.gotLimit = limit
+	f.gotOffset = offset
 	return f.feed, f.err
 }
 
@@ -108,6 +112,27 @@ func TestGetFeed_DefaultLimit(t *testing.T) {
 	json.Unmarshal(w.Body.Bytes(), &res)
 	assert.Equal(t, 10, res.Limit)
 	assert.Equal(t, 0, res.Offset)
+}
+
+func TestGetFeed_PaginationClamped(t *testing.T) {
+	store := &fakeStore{
+		feed:      []model.FeedArticle{},
+		feedTotal: 0,
+	}
+	r := newTestRouter(store)
+
+	w := httptest.NewRecorder()
+	req := httptest.NewRequest("GET", "/feed?limit=999&offset=-5", nil)
+	r.ServeHTTP(w, req)
+
+	assert.Equal(t, http.StatusOK, w.Code)
+
+	var res FeedResponse
+	json.Unmarshal(w.Body.Bytes(), &res)
+	assert.Equal(t, 100, res.Limit)
+	assert.Equal(t, 0, res.Offset)
+	assert.Equal(t, 100, store.gotLimit)
+	assert.Equal(t, 0, store.gotOffset)
 }
 
 func TestGetArticle_Found(t *testing.T) {

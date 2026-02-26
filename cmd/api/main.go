@@ -26,6 +26,9 @@ func main() {
 	articleRepo := repository.NewArticleRepository(db.DB)
 	articleHandler := handler.NewArticleHandler(articleRepo)
 
+	summaryRepo := repository.NewSummaryRepository(db.DB)
+	summaryHandler := handler.NewSummaryHandler(summaryRepo)
+
 	r := gin.Default()
 
 	allowedOrigins := []string{"http://localhost:3000"}
@@ -45,6 +48,7 @@ func main() {
 	r.GET("/feed/:id", articleHandler.GetArticle)
 	r.GET("/feed", articleHandler.GetFeed)
 	r.GET("/categories", articleHandler.GetCategories)
+	r.GET("/summaries", summaryHandler.GetSummaries)
 	r.GET("/health", articleHandler.GetHealth)
 
 	err = r.Run(":8080")

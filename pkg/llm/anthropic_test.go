@@ -28,6 +28,16 @@ func TestCleanJSONResponse(t *testing.T) {
 			input: "  {\"headline\":\"test\"}  ",
 			want:  `{"headline":"test"}`,
 		},
+		{
+			name:  "extracts JSON from prose",
+			input: "Here is the result:\n{\"headline\":\"test\"}\nThanks",
+			want:  `{"headline":"test"}`,
+		},
+		{
+			name:  "extracts JSON from fenced prose",
+			input: "Output:\n```json\n{\"headline\":\"test\"}\n```\nDone.",
+			want:  `{"headline":"test"}`,
+		},
 	}
 
 	for _, tt := range tests {

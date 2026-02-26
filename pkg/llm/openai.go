@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"strings"
 
 	"github.com/openai/openai-go"
 	"github.com/openai/openai-go/option"
@@ -65,7 +66,7 @@ func (c *OpenAIClient) Transform(input TransformInput) (*TransformResult, error)
 		return nil, fmt.Errorf("no response from openai")
 	}
 
-	content := resp.Choices[0].Message.Content
+	content := cleanJSONResponse(resp.Choices[0].Message.Content)
 
 	var parsed struct {
 		Headline       string `json:"headline"`
@@ -86,5 +87,46 @@ func (c *OpenAIClient) Transform(input TransformInput) (*TransformResult, error)
 		SentimentScore: parsed.SentimentScore,
 		PromptVersion:  promptVersion,
 		ModelUsed:      c.modelName,
+	}, nil
+}
+
+func (c *OpenAIClient) Summarize(articles []SummaryInput) (*SummaryResult, error) {
+	var sb strings.Builder
+	for i, a := range articles {
+		sb.WriteString(fmt.Sprintf("%d. Headline: %s\nSummary: %s\n\n", i+1, a.Headline, a.Detail))
+	}
+
+	resp, err := c.client.Chat.Completions.New(context.Background(), openai.ChatCompletionNewParams{
+		Model: c.model,
+		Messages: []openai.ChatCompletionMessageParamUnion{
+			openai.SystemMessage(summarySystemPrompt),
+			openai.UserMessage(sb.String()),
+		},
+	})
+
+	if err != nil {
+		return nil, fmt.Errorf("openai API error: %w", err)
+	}
+
+	if len(resp.Choices) == 0 {
+		return nil, fmt.Errorf("no response from openai")
+	}
+
+	content := cleanJSONResponse(resp.Choices[0].Message.Content)
+
+	var parsed struct {
+		Paragraph string   `json:"paragraph"`
+		Bullets   []string `json:"bullets"`
+	}
+
+	err = json.Unmarshal([]byte(content), &parsed)
+	if err != nil {
+		return nil, fmt.Errorf("failed to parse response: %w, content: %s", err, content)
+	}
+
+	return &SummaryResult{
+		Paragraph: parsed.Paragraph,
+		Bullets:   parsed.Bullets,
+		ModelUsed: c.modelName,
 	}, nil
 }

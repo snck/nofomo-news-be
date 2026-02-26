@@ -29,8 +29,8 @@ func NewArticleHandler(repository ArticleStore) *ArticleHandler {
 
 func (h *ArticleHandler) GetFeed(c *gin.Context) {
 
-	limit := getQueryInt("limit", 10, c)
-	offset := getQueryInt("offset", 0, c)
+	limit := getQueryLimit(c)
+	offset := getQueryOffset(c)
 
 	articles, err := h.repository.GetFeed(limit, offset)
 	if err != nil {
@@ -198,4 +198,33 @@ func getQueryInt(name string, defaultValue int, c *gin.Context) int {
 	}
 
 	return parsedValue
+}
+
+func getQueryLimit(c *gin.Context) int {
+	const (
+		defaultLimit = 10
+		maxLimit     = 100
+	)
+
+	limit := getQueryInt("limit", defaultLimit, c)
+	if limit < 1 {
+		slog.Warn("invalid query parameter, using default", "param", "limit", "value", limit, "default", defaultLimit)
+		return defaultLimit
+	}
+
+	if limit > maxLimit {
+		slog.Warn("query parameter exceeds max, clamping", "param", "limit", "value", limit, "max", maxLimit)
+		return maxLimit
+	}
+
+	return limit
+}
+
+func getQueryOffset(c *gin.Context) int {
+	offset := getQueryInt("offset", 0, c)
+	if offset < 0 {
+		slog.Warn("invalid query parameter, using default", "param", "offset", "value", offset, "default", 0)
+		return 0
+	}
+	return offset
 }
