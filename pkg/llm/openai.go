@@ -130,3 +130,84 @@ func (c *OpenAIClient) Summarize(articles []SummaryInput) (*SummaryResult, error
 		ModelUsed: c.modelName,
 	}, nil
 }
+
+func (c *OpenAIClient) ClusterAndSummarize(articles []SummaryInput) (*ClusterSummaryResult, error) {
+	// Pass 1: Cluster & Rank
+	userPrompt := formatArticlesForClustering(articles)
+
+	resp, err := c.client.Chat.Completions.New(context.Background(), openai.ChatCompletionNewParams{
+		Model: openai.ChatModelGPT4_1Mini,
+		Messages: []openai.ChatCompletionMessageParamUnion{
+			openai.SystemMessage(clusterRankPrompt),
+			openai.UserMessage(userPrompt),
+		},
+	})
+	if err != nil {
+		return nil, fmt.Errorf("openai cluster pass error: %w", err)
+	}
+	if len(resp.Choices) == 0 {
+		return nil, fmt.Errorf("no response from openai (cluster pass)")
+	}
+
+	content := cleanJSONResponse(resp.Choices[0].Message.Content)
+
+	var clusterResult struct {
+		Clusters []struct {
+			Topic            string `json:"topic"`
+			ArticleIndices   []int  `json:"article_indices"`
+			ImportanceReason string `json:"importance_reason"`
+		} `json:"clusters"`
+	}
+	if err := json.Unmarshal([]byte(content), &clusterResult); err != nil {
+		return nil, fmt.Errorf("failed to parse cluster response: %w, content: %s", err, content)
+	}
+
+	// Pass 2: Synthesize each cluster
+	var stories []StorySummary
+	for _, cluster := range clusterResult.Clusters {
+		clusterArticles := gatherClusterArticles(articles, cluster.ArticleIndices)
+		story, err := c.synthesizeCluster(clusterArticles)
+		if err != nil {
+			return nil, fmt.Errorf("openai synthesis error for cluster %q: %w", cluster.Topic, err)
+		}
+		stories = append(stories, *story)
+	}
+
+	return &ClusterSummaryResult{
+		Stories:   stories,
+		ModelUsed: "gpt-4.1-mini",
+	}, nil
+}
+
+func (c *OpenAIClient) synthesizeCluster(articles []SummaryInput) (*StorySummary, error) {
+	userPrompt := formatArticlesForSynthesis(articles)
+
+	resp, err := c.client.Chat.Completions.New(context.Background(), openai.ChatCompletionNewParams{
+		Model: openai.ChatModelGPT4_1Mini,
+		Messages: []openai.ChatCompletionMessageParamUnion{
+			openai.SystemMessage(synthesizePrompt),
+			openai.UserMessage(userPrompt),
+		},
+	})
+	if err != nil {
+		return nil, fmt.Errorf("openai API error: %w", err)
+	}
+	if len(resp.Choices) == 0 {
+		return nil, fmt.Errorf("no response from openai")
+	}
+
+	content := cleanJSONResponse(resp.Choices[0].Message.Content)
+
+	var parsed struct {
+		Stories []StorySummary `json:"stories"`
+	}
+	if err := json.Unmarshal([]byte(content), &parsed); err != nil {
+		return nil, fmt.Errorf("failed to parse synthesis response: %w, content: %s", err, content)
+	}
+
+	if len(parsed.Stories) == 0 {
+		return nil, fmt.Errorf("no stories in synthesis response")
+	}
+
+	return &parsed.Stories[0], nil
+}

@@ -51,6 +51,8 @@ func main() {
 	r.GET("/categories", articleHandler.GetCategories)
 	r.GET("/summaries/latest", summaryHandler.GetLatestSummary)
 	r.GET("/summaries", summaryHandler.GetSummaries)
+	r.GET("/stories/latest", summaryHandler.GetLatestStories)
+	r.GET("/stories", summaryHandler.GetStories)
 	r.GET("/health", articleHandler.GetHealth)
 
 	err = r.Run(":8080")

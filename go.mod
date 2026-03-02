@@ -4,7 +4,7 @@ go 1.25.5
 
 require (
 	github.com/Finnhub-Stock-API/finnhub-go/v2 v2.0.22 // indirect
-	github.com/anthropics/anthropic-sdk-go v1.21.0 // indirect
+	github.com/anthropics/anthropic-sdk-go v1.26.0 // indirect
 	github.com/bytedance/sonic v1.14.0 // indirect
 	github.com/bytedance/sonic/loader v0.3.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect

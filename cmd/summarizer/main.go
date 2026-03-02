@@ -23,6 +23,7 @@ func main() {
 	}
 	defer db.Close()
 
+	articleRepo := repository.NewArticleRepository(db.DB)
 	summaryRepo := repository.NewSummaryRepository(db.DB)
 	openAIClient := llm.NewOpenAIClient(os.Getenv("OPENAI_API_KEY"))
 
@@ -43,22 +44,36 @@ func main() {
 
 	slog.Info("summarizing articles", "count", len(articles), "from_id", fromID)
 
+	// Batch-load symbols for all articles
+	articleIDs := make([]int64, len(articles))
+	for i, a := range articles {
+		articleIDs[i] = a.ID
+	}
+	symbolsMap, err := articleRepo.GetSymbolsByOriginalIDs(articleIDs)
+	if err != nil {
+		log.Fatalf("error fetching symbols: %v", err)
+	}
+
 	inputs := make([]llm.SummaryInput, len(articles))
 	for i, a := range articles {
 		inputs[i] = llm.SummaryInput{
-			Headline: a.Headline,
-			Detail:   a.Detail,
+			ID:          a.ID,
+			Headline:    a.Headline,
+			Detail:      a.Detail,
+			Publisher:   a.Publisher,
+			PublishedAt: a.PublishedAt,
+			Symbols:     symbolsMap[a.ID],
 		}
 	}
 
-	result, err := openAIClient.Summarize(inputs)
+	result, err := openAIClient.ClusterAndSummarize(inputs)
 	if err != nil {
-		log.Fatalf("error generating summary: %v", err)
+		log.Fatalf("error generating cluster summary: %v", err)
 	}
 
 	summary := &model.NewsSummary{
-		Paragraph:     result.Paragraph,
-		Bullets:       result.Bullets,
+		Paragraph:     "",
+		Bullets:       []string{},
 		ArticleCount:  len(articles),
 		FromArticleID: articles[0].ID,
 		ToArticleID:   articles[len(articles)-1].ID,
@@ -70,5 +85,22 @@ func main() {
 		log.Fatalf("error saving summary: %v", err)
 	}
 
-	slog.Info("summary saved successfully", "summary_id", summary.ID, "article_count", summary.ArticleCount)
+	stories := make([]model.NewsStory, len(result.Stories))
+	for i, s := range result.Stories {
+		stories[i] = model.NewsStory{
+			Headline:   s.Headline,
+			Summary:    s.Summary,
+			Angles:     s.Angles,
+			Tickers:    s.Tickers,
+			Publishers: s.Publishers,
+			TimeRange:  s.TimeRange,
+		}
+	}
+
+	err = summaryRepo.SaveStories(summary.ID, stories)
+	if err != nil {
+		log.Fatalf("error saving stories: %v", err)
+	}
+
+	slog.Info("summary saved successfully", "summary_id", summary.ID, "article_count", summary.ArticleCount, "story_count", len(stories))
 }
