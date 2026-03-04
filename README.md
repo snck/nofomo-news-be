@@ -110,4 +110,5 @@ go vet ./...
 gcloud builds submit --config=cloudbuild-api.yaml
 gcloud builds submit --config=cloudbuild-fetcher.yaml
 gcloud builds submit --config=cloudbuild-transformer.yaml
+gcloud builds submit --config=cloudbuild-summarizer.yaml
 ```
