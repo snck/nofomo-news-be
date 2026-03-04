@@ -4,7 +4,6 @@ import (
 	"log"
 	"log/slog"
 	"os"
-	"strconv"
 	"zennews/db"
 	"zennews/internal/model"
 	"zennews/internal/repository"
@@ -24,12 +23,6 @@ func main() {
 		log.Fatalf("error connecting to DB: %v", err)
 	}
 	defer db.Close()
-
-	err = db.ConnectRedis()
-	if err != nil {
-		log.Fatalf("error connecting to Redis: %v", err)
-	}
-	defer db.CloseRedis()
 
 	var clients []news.NewsClient
 	if key := os.Getenv("FINNHUB_API_KEY"); key != "" {
@@ -85,12 +78,6 @@ func main() {
 			}
 
 			saved++
-
-			err = db.PushToQueue(db.TransformQueueKey, strconv.FormatInt(article.ID, 10))
-			if err != nil {
-				slog.Error("error pushing to Redis queue", "source", source, "error", err, "article_id", article.ID)
-				errors++
-			}
 		}
 
 		slog.Info("fetch complete", "source", source, "saved", saved, "duplicated", duplicated, "errors", errors)
