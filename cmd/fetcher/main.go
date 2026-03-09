@@ -35,6 +35,12 @@ func main() {
 		clients = append(clients, news.NewMassiveClient(key))
 	}
 
+	// RSS feeds (no API key required)
+	clients = append(clients,
+		news.NewRSSClient("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100727362", "CNBC"),
+		news.NewRSSClient("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=15837362", "CNBC"),
+	)
+
 	if len(clients) == 0 {
 		slog.Error("no news source API keys configured")
 		return
