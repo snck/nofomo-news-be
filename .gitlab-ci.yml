@@ -1,5 +1,6 @@
 stages:
   - test
+  - build
 
 test:
   stage: test
@@ -7,3 +8,12 @@ test:
   script:
     - go vet ./...
     - go test ./...
+
+build:
+  stage: build
+  image: golang:1.25-alpine
+  script:
+    - go build ./cmd/api
+    - go build ./cmd/fetcher
+    - go build ./cmd/summarizer
+    - go build ./cmd/transformer
