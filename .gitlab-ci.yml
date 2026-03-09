@@ -1,0 +1,9 @@
+stages:
+  - test
+
+test:
+  stage: test
+  image: golang:1.25-alpine
+  script:
+    - go vet ./...
+    - go test ./...
