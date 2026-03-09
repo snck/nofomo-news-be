@@ -88,7 +88,7 @@ func TestGetFeed_ReturnArticles(t *testing.T) {
 	r := newTestRouter(store)
 
 	w := httptest.NewRecorder()
-	req := httptest.NewRequest("GET", "/feed?limit=10&ofset=0", nil)
+	req := httptest.NewRequest("GET", "/feed?limit=10&offset=0", nil)
 	r.ServeHTTP(w, req)
 
 	assert.Equal(t, http.StatusOK, w.Code)
