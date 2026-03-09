@@ -34,6 +34,9 @@ func main() {
 	if key := os.Getenv("MASSIVE_API_KEY"); key != "" {
 		clients = append(clients, news.NewMassiveClient(key))
 	}
+	if key := os.Getenv("MARKETAUX_API_KEY"); key != "" {
+		clients = append(clients, news.NewMarketauxClient(key, 4))
+	}
 
 	// RSS feeds (no API key required)
 	clients = append(clients,

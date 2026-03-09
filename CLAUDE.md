@@ -48,6 +48,7 @@ go mod tidy
 | `FINNHUB_API_KEY` | — | Fetcher |
 | `ALPHA_VANTAGE_API_KEY` | — | Fetcher |
 | `MASSIVE_API_KEY` | — | Fetcher |
+| `MARKETAUX_API_KEY` | — | Fetcher |
 | `OPENAI_API_KEY` | — | Transformer (if using OpenAI) |
 | `ANTHROPIC_API_KEY` | — | Transformer (if using Anthropic) |
 
